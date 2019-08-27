@@ -50,6 +50,7 @@ namespace Sapho_IDE
             bt_saveall.Enabled = false;
             bt_undo.Enabled = false;
             bt_redo.Enabled = false;
+            bt_assembler.Enabled = false;
 
             saveToolStripMenuItem.Enabled = false;
             saToolStripMenuItem.Enabled = false;
@@ -190,6 +191,7 @@ namespace Sapho_IDE
 
             File.WriteAllText(projdirect + "\\Software\\" + pName + "_S\\" + pName + ".c", fctb.Text);
 
+            bt_assembler.Enabled = true;
             bt_AddProc.Enabled = true;
             bt_build.Enabled = true;
             bt_copy.Enabled = true;
@@ -333,6 +335,7 @@ namespace Sapho_IDE
                 bt_saveall.Enabled = true;
                 bt_undo.Enabled = true;
                 bt_redo.Enabled = true;
+                bt_assembler.Enabled = true;
 
                 saveToolStripMenuItem.Enabled = true;
                 saToolStripMenuItem.Enabled = true;

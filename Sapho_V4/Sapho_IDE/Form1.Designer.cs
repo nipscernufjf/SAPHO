@@ -276,9 +276,9 @@
             this.bt_redo,
             this.toolStripSeparator3,
             this.bt_build,
+            this.bt_assembler,
             this.toolStripSeparator6,
-            this.bt_AddProc,
-            this.bt_assembler});
+            this.bt_AddProc});
             this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -421,7 +421,7 @@
             this.splitContainer1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 55);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -443,9 +443,9 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(300, 586);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -457,7 +457,7 @@
             this.hierarchy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hierarchy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hierarchy.Location = new System.Drawing.Point(4, 23);
-            this.hierarchy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hierarchy.Margin = new System.Windows.Forms.Padding(4);
             this.hierarchy.Name = "hierarchy";
             this.hierarchy.Size = new System.Drawing.Size(292, 559);
             this.hierarchy.TabIndex = 1;
@@ -467,7 +467,7 @@
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -488,7 +488,7 @@
             this.tabControl1.ContextMenuStrip = this.tabsMenuStrip;
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1078, 336);
@@ -515,9 +515,9 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(1078, 245);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
@@ -528,7 +528,7 @@
             this.console_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.console_tb.Dock = System.Windows.Forms.DockStyle.Fill;
             this.console_tb.Location = new System.Drawing.Point(4, 23);
-            this.console_tb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.console_tb.Margin = new System.Windows.Forms.Padding(4);
             this.console_tb.Name = "console_tb";
             this.console_tb.Size = new System.Drawing.Size(1070, 218);
             this.console_tb.TabIndex = 2;
@@ -549,7 +549,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_Main";
             this.Text = "Sapho - IDE";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Main_FormClosing);
