@@ -50,6 +50,7 @@ namespace Sapho_IDE
             bt_saveall.Enabled = false;
             bt_undo.Enabled = false;
             bt_redo.Enabled = false;
+            bt_assembler.Enabled = false;
 
             saveToolStripMenuItem.Enabled = false;
             saToolStripMenuItem.Enabled = false;
@@ -75,7 +76,7 @@ namespace Sapho_IDE
             e.ChangedRange.SetStyle(GreenStyleD, @"#define|#PRNAME|#DIRNAM|#DATYPE|#NUBITS|#NBMANT|#NBEXPO|#NDSTAC|#SDEPTH|#NUIOIN|#NUIOOU", RegexOptions.Multiline);
 
             // Assembly Highlighting
-            e.ChangedRange.SetStyle(AssmblyStyleD, @"LOAD|PLD|SET|SETP|PUSH|JZ|JMP|CALL|RETURN|SRF|IN|OUT|NEG|ADD|SADD|MLT|SMLT|DIV|SDIV|MOD|SMOD|AND|SAND|LAND|SLAND|OR|SOR|LOR|SLOR|XOR|SXOR|XORB|SXORB|INV|LINV|EQU|SEQU|NOP|GRE|SGRE|LES|SLES|SHR|SSHR|SHL|SSHL|SRS|SSRS", RegexOptions.Multiline);
+            e.ChangedRange.SetStyle(AssmblyStyleD, @"LOAD|PLD|SET|SETP|PUSH|JZ|JMP|CALL|RETURN|SRF|IN|OUT|NEG|ADD|SADD|MLT|SMLT|DIV|SDIV|MOD|SMOD|AND|SAND|LAND|SLAND|OR|SOR|LOR|SLOR|XOR|SXOR|XORB|SXORB|INV|LINV|EQU|SEQU|NOP|GRE|SGRE|LES|SLES|SHR|SSHR|SHL|SSHL|SRS|SSRS|PSET|PSETP", RegexOptions.Multiline);
 
             //comment highlighting
             e.ChangedRange.SetStyle(GreenStyle, @"//.*$", RegexOptions.Multiline);
@@ -190,6 +191,7 @@ namespace Sapho_IDE
 
             File.WriteAllText(projdirect + "\\Software\\" + pName + "_S\\" + pName + ".c", fctb.Text);
 
+            bt_assembler.Enabled = true;
             bt_AddProc.Enabled = true;
             bt_build.Enabled = true;
             bt_copy.Enabled = true;
@@ -333,6 +335,7 @@ namespace Sapho_IDE
                 bt_saveall.Enabled = true;
                 bt_undo.Enabled = true;
                 bt_redo.Enabled = true;
+                bt_assembler.Enabled = true;
 
                 saveToolStripMenuItem.Enabled = true;
                 saToolStripMenuItem.Enabled = true;
@@ -734,6 +737,11 @@ namespace Sapho_IDE
             }
 
             SaveTree(hierarchy, projdirect + "\\" + projectname + ".spf");
+        }
+
+        private void TabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         private static void SortErrorHandler(object sendingProcess, DataReceivedEventArgs outLine)
