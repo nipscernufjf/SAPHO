@@ -63,9 +63,9 @@
             this.bt_redo = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.bt_build = new System.Windows.Forms.ToolStripButton();
+            this.bt_assembler = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.bt_AddProc = new System.Windows.Forms.ToolStripButton();
-            this.bt_assembler = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -381,6 +381,16 @@
             this.bt_build.Text = "Build";
             this.bt_build.Click += new System.EventHandler(this.bt_build_Click);
             // 
+            // bt_assembler
+            // 
+            this.bt_assembler.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bt_assembler.Image = ((System.Drawing.Image)(resources.GetObject("bt_assembler.Image")));
+            this.bt_assembler.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.bt_assembler.Name = "bt_assembler";
+            this.bt_assembler.Size = new System.Drawing.Size(29, 24);
+            this.bt_assembler.Text = "Assembler";
+            this.bt_assembler.Click += new System.EventHandler(this.Bt_assembler_Click);
+            // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
@@ -395,16 +405,6 @@
             this.bt_AddProc.Size = new System.Drawing.Size(29, 24);
             this.bt_AddProc.Text = "Add Proc";
             this.bt_AddProc.Click += new System.EventHandler(this.bt_AddProc_Click);
-            // 
-            // bt_assembler
-            // 
-            this.bt_assembler.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bt_assembler.Image = ((System.Drawing.Image)(resources.GetObject("bt_assembler.Image")));
-            this.bt_assembler.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.bt_assembler.Name = "bt_assembler";
-            this.bt_assembler.Size = new System.Drawing.Size(29, 24);
-            this.bt_assembler.Text = "Assembler";
-            this.bt_assembler.Click += new System.EventHandler(this.Bt_assembler_Click);
             // 
             // statusStrip1
             // 
@@ -493,6 +493,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1078, 336);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.TabControl1_SelectedIndexChanged);
             // 
             // tabsMenuStrip
             // 
