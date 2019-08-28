@@ -82,14 +82,15 @@ wire [NBMANT+NBEXPO:0] id_ula_data;
 wire [MDATAW     -1:0] id_mem_addr;
 wire                   id_srf;
 
+wire id_neg; //////////////////////////////////////
+
 instr_dec_fl #(NBMANT+NBEXPO+1, NBOPCO, NBOPER, MDATAW) id(clk, rst,
                                                         id_opcode, id_operand,
                                                         id_dsp_push, id_dsp_pop,
                                                         id_ula_op, id_ula_data,
                                                         mem_wr, id_mem_addr, mem_data_in,
                                                         io_in, req_in, out_en,
-                                                        id_srf);
-
+                                                        id_srf, id_neg); /////////////////////////////
 // Ponteiro pra pilha de dados ------------------------------------------------
 
 wire              sp_push = id_dsp_push;
@@ -119,17 +120,27 @@ ula_fl #(NBEXPO,
 
 // Acumulador -----------------------------------------------------------------
 
+										//////////////////////////////////////////////////////////////
+
+wire  [NBMANT+NBEXPO:0] out;
+// wire neg = 1;
+
+
+positivo #(NBMANT, NBEXPO) positivo(ula_out, id_neg, out);
+										//////////////////////////////////////////////////////////////
+
 reg signed [NBMANT+NBEXPO:0] racc;
 
 always @ (posedge clk or posedge rst) begin
 	if (rst)
 		racc <= 0;
 	else
-		racc <= ula_out;
+		racc <= out; 						///////////////////////////////////////
+		//racc <= ula_out;
 end
 
 assign ula_acc = racc;
-assign pf_acc  = ula_out[0];
+assign pf_acc  = out[0];//ula_out[0];
 
 // Pilha de instrucao ---------------------------------------------------------
 
@@ -164,7 +175,7 @@ endgenerate
 
 // Interface externa ----------------------------------------------------------
 
-assign data_out   =  ula_out;
+assign data_out   =  out;//ula_out; 					//////////////////////////////////////
 assign mem_addr_w = (sp_push   ) ? sp_addr_w : rf;
 assign mem_addr_r = (sp_pop    ) ? sp_addr_r : rf;
 
