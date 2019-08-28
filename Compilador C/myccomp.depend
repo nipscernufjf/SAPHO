@@ -1,0 +1,673 @@
+# depslib dependency file v1.0
+1380156677 source:c:\users\luciano\desktop\myproc\projetos\13 - pipeline generalizando o numero de bits\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1380156622 c:\users\luciano\desktop\myproc\projetos\13 - pipeline generalizando o numero de bits\compilador c\variaveis.h
+
+1380156677 source:c:\users\luciano\desktop\embarcados\exercicios\09 - pipeline com pilha de dados\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1380156622 c:\users\luciano\desktop\embarcados\exercicios\09 - pipeline com pilha de dados\compilador c\variaveis.h
+
+1380156677 source:c:\users\luciano\desktop\embarcados\exercicios\10 - pipeline com enderecamento indireto\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1380156622 c:\users\luciano\desktop\embarcados\exercicios\10 - pipeline com enderecamento indireto\compilador c\variaveis.h
+
+1381021737 source:c:\users\luciano\desktop\embarcados\exercicios\10 - enderecamento indireto\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1381021745 c:\users\luciano\desktop\embarcados\exercicios\10 - enderecamento indireto\compilador c\variaveis.h
+
+1381101942 source:c:\users\luciano\desktop\embarcados\exercicios\10 - enderecamento indireto\compilador c\labels.c
+	"labels.h"
+
+1381101956 c:\users\luciano\desktop\embarcados\exercicios\10 - enderecamento indireto\compilador c\labels.h
+
+1381101942 source:c:\users\luciano\desktop\embarcados\exercicios\11 - pipeline com subrotina\compilador c\labels.c
+	"labels.h"
+
+1381101956 c:\users\luciano\desktop\embarcados\exercicios\11 - pipeline com subrotina\compilador c\labels.h
+
+1381021737 source:c:\users\luciano\desktop\embarcados\exercicios\11 - pipeline com subrotina\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1381021745 c:\users\luciano\desktop\embarcados\exercicios\11 - pipeline com subrotina\compilador c\variaveis.h
+
+1381174104 source:c:\users\luciano\desktop\embarcados\exercicios\12 - pipeline generalizando\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1381101956 c:\users\luciano\desktop\embarcados\exercicios\12 - pipeline generalizando\compilador c\labels.h
+
+1381174301 source:c:\users\luciano\desktop\embarcados\exercicios\12 - pipeline generalizando\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1381021745 c:\users\luciano\desktop\embarcados\exercicios\12 - pipeline generalizando\compilador c\variaveis.h
+
+1381177704 source:c:\users\luciano\desktop\embarcados\exercicios\13 - pipeline generalizando\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1381105556 c:\users\luciano\desktop\embarcados\exercicios\13 - pipeline generalizando\compilador c\labels.h
+
+1381177901 source:c:\users\luciano\desktop\embarcados\exercicios\13 - pipeline generalizando\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1381025345 c:\users\luciano\desktop\embarcados\exercicios\13 - pipeline generalizando\compilador c\variaveis.h
+
+1382647801 source:c:\users\luciano\desktop\embarcados\exercicios\13 - pipeline generalizando\compilador c\parametros.c
+	"parametros.h"
+	<string.h>
+
+1382647728 c:\users\luciano\desktop\embarcados\exercicios\13 - pipeline generalizando\compilador c\parametros.h
+
+1381177704 source:c:\users\luciano\desktop\embarcados\exercicios\14 - io\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1381105556 c:\users\luciano\desktop\embarcados\exercicios\14 - io\compilador c\labels.h
+
+1382647801 source:c:\users\luciano\desktop\embarcados\exercicios\14 - io\compilador c\parametros.c
+	"parametros.h"
+	<string.h>
+
+1382647728 c:\users\luciano\desktop\embarcados\exercicios\14 - io\compilador c\parametros.h
+
+1381177901 source:c:\users\luciano\desktop\embarcados\exercicios\14 - io\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1383583377 c:\users\luciano\desktop\embarcados\exercicios\14 - io\compilador c\variaveis.h
+
+1381177706 source:c:\users\luciano\desktop\embarcados\exercicios\15 - ponto flutuante\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1381105558 c:\users\luciano\desktop\embarcados\exercicios\15 - ponto flutuante\compilador c\labels.h
+
+1381177902 source:c:\users\luciano\desktop\embarcados\exercicios\15 - ponto flutuante\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1383583378 c:\users\luciano\desktop\embarcados\exercicios\15 - ponto flutuante\compilador c\variaveis.h
+
+1381177706 source:c:\users\luciano\desktop\15 - ponto flutuante\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1381105558 c:\users\luciano\desktop\15 - ponto flutuante\compilador c\labels.h
+
+1381177902 source:c:\users\luciano\desktop\15 - ponto flutuante\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1383583378 c:\users\luciano\desktop\15 - ponto flutuante\compilador c\variaveis.h
+
+1381177706 source:c:\users\eder\desktop\59_ponto_flutuante\15 - ponto flutuante\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1381105558 c:\users\eder\desktop\59_ponto_flutuante\15 - ponto flutuante\compilador c\labels.h
+
+1381177902 source:c:\users\eder\desktop\59_ponto_flutuante\15 - ponto flutuante\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1383579778 c:\users\eder\desktop\59_ponto_flutuante\15 - ponto flutuante\compilador c\variaveis.h
+
+1381177706 source:c:\users\eder\desktop\61_nova_subsituicao_proc_float\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1381105558 c:\users\eder\desktop\61_nova_subsituicao_proc_float\compilador c\labels.h
+
+1381177902 source:c:\users\eder\desktop\61_nova_subsituicao_proc_float\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1383579778 c:\users\eder\desktop\61_nova_subsituicao_proc_float\compilador c\variaveis.h
+
+1381177706 source:c:\users\eder\desktop\62_concerto_reset\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1381105558 c:\users\eder\desktop\62_concerto_reset\compilador c\labels.h
+
+1381177902 source:c:\users\eder\desktop\62_concerto_reset\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1383579778 c:\users\eder\desktop\62_concerto_reset\compilador c\variaveis.h
+
+1381177706 source:c:\users\eder\desktop\63_troca_array\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1381105558 c:\users\eder\desktop\63_troca_array\compilador c\labels.h
+
+1381177902 source:c:\users\eder\desktop\63_troca_array\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1383579778 c:\users\eder\desktop\63_troca_array\compilador c\variaveis.h
+
+1381174106 source:d:\dropbox\doutorado\compactação de sinais\estimacao_frequencia\pll_floatingpoint\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1381101958 d:\dropbox\doutorado\compactação de sinais\estimacao_frequencia\pll_floatingpoint\compilador c\labels.h
+
+1381174302 source:d:\dropbox\doutorado\compactação de sinais\estimacao_frequencia\pll_floatingpoint\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1383576178 d:\dropbox\doutorado\compactação de sinais\estimacao_frequencia\pll_floatingpoint\compilador c\variaveis.h
+
+1381174106 source:d:\dropbox\doutorado\compactação de sinais\estimacao_frequencia\pll_floatingpoint_ok\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1381101958 d:\dropbox\doutorado\compactação de sinais\estimacao_frequencia\pll_floatingpoint_ok\compilador c\labels.h
+
+1381174302 source:d:\dropbox\doutorado\compactação de sinais\estimacao_frequencia\pll_floatingpoint_ok\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1383576178 d:\dropbox\doutorado\compactação de sinais\estimacao_frequencia\pll_floatingpoint_ok\compilador c\variaveis.h
+
+1381174106 source:c:\users\eder\desktop\novo_teste_so_pll_float\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1381101958 c:\users\eder\desktop\novo_teste_so_pll_float\compilador c\labels.h
+
+1381174302 source:c:\users\eder\desktop\novo_teste_so_pll_float\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1383576178 c:\users\eder\desktop\novo_teste_so_pll_float\compilador c\variaveis.h
+
+1381174106 source:c:\users\eder\desktop\67_novo_teste_so_pll_float\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1381101958 c:\users\eder\desktop\67_novo_teste_so_pll_float\compilador c\labels.h
+
+1381174302 source:c:\users\eder\desktop\67_novo_teste_so_pll_float\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1383576178 c:\users\eder\desktop\67_novo_teste_so_pll_float\compilador c\variaveis.h
+
+1381174106 source:c:\users\eder\desktop\67_novo_teste_so_pll_float_menos_bits\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1381101958 c:\users\eder\desktop\67_novo_teste_so_pll_float_menos_bits\compilador c\labels.h
+
+1381174302 source:c:\users\eder\desktop\67_novo_teste_so_pll_float_menos_bits\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1383576178 c:\users\eder\desktop\67_novo_teste_so_pll_float_menos_bits\compilador c\variaveis.h
+
+1381174106 source:c:\users\eder\desktop\67_novo_teste_so_pll_float_arredondamentos_2\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1381101958 c:\users\eder\desktop\67_novo_teste_so_pll_float_arredondamentos_2\compilador c\labels.h
+
+1381174302 source:c:\users\eder\desktop\67_novo_teste_so_pll_float_arredondamentos_2\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1383576178 c:\users\eder\desktop\67_novo_teste_so_pll_float_arredondamentos_2\compilador c\variaveis.h
+
+1381174106 source:c:\users\eder\desktop\67_novo_teste_so_pll_float_arredondamentos_3\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1381101958 c:\users\eder\desktop\67_novo_teste_so_pll_float_arredondamentos_3\compilador c\labels.h
+
+1381174302 source:c:\users\eder\desktop\67_novo_teste_so_pll_float_arredondamentos_3\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1383576178 c:\users\eder\desktop\67_novo_teste_so_pll_float_arredondamentos_3\compilador c\variaveis.h
+
+1381174106 source:c:\users\eder\desktop\67_arredondamenos_4_aumento-mantissa\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1381101958 c:\users\eder\desktop\67_arredondamenos_4_aumento-mantissa\compilador c\labels.h
+
+1381174302 source:c:\users\eder\desktop\67_arredondamenos_4_aumento-mantissa\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1383576178 c:\users\eder\desktop\67_arredondamenos_4_aumento-mantissa\compilador c\variaveis.h
+
+1381174106 source:c:\users\eder\desktop\67_arredondamenos_4_aumento-mantissa_filtro_but\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1381101958 c:\users\eder\desktop\67_arredondamenos_4_aumento-mantissa_filtro_but\compilador c\labels.h
+
+1381174302 source:c:\users\eder\desktop\67_arredondamenos_4_aumento-mantissa_filtro_but\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1383576178 c:\users\eder\desktop\67_arredondamenos_4_aumento-mantissa_filtro_but\compilador c\variaveis.h
+
+1381174106 source:c:\users\eder\desktop\67_arredondamenos_4_diminui_mantissa_filtro_but\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1381101958 c:\users\eder\desktop\67_arredondamenos_4_diminui_mantissa_filtro_but\compilador c\labels.h
+
+1381174302 source:c:\users\eder\desktop\67_arredondamenos_4_diminui_mantissa_filtro_but\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1383576178 c:\users\eder\desktop\67_arredondamenos_4_diminui_mantissa_filtro_but\compilador c\variaveis.h
+
+1381174106 source:c:\users\bill\desktop\15 - ponto flutuante\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1381101958 c:\users\bill\desktop\15 - ponto flutuante\compilador c\labels.h
+
+1381174302 source:c:\users\bill\desktop\15 - ponto flutuante\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1383576178 c:\users\bill\desktop\15 - ponto flutuante\compilador c\variaveis.h
+
+1381174106 source:c:\users\bill\desktop\embarcados\exercicios\17 - ponto flutuante\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1381101958 c:\users\bill\desktop\embarcados\exercicios\17 - ponto flutuante\compilador c\labels.h
+
+1381174302 source:c:\users\bill\desktop\embarcados\exercicios\17 - ponto flutuante\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1383576178 c:\users\bill\desktop\embarcados\exercicios\17 - ponto flutuante\compilador c\variaveis.h
+
+1413456409 source:c:\users\bill\desktop\embarcados\exercicios\17 - ponto flutuante\compilador c\lex.yy.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<io.h>
+	<stdlib.h>
+	<string.h>
+	"y.tab.h"
+	"variaveis.h"
+	<stdlib.h>
+
+1413456409 c:\users\bill\desktop\embarcados\exercicios\17 - ponto flutuante\compilador c\y.tab.h
+
+1413456409 source:c:\users\bill\desktop\embarcados\exercicios\17 - ponto flutuante\compilador c\y.tab.c
+	<stdio.h>
+	<string.h>
+	"variaveis.h"
+	"labels.h"
+	<stddef.h>
+	<libintl.h>
+	<alloca.h>
+	<malloc.h>
+	<stdlib.h>
+	<stdlib.h>
+	<stdio.h>
+
+1381177706 source:c:\users\luciano\desktop\veriproc\17 - ponto flutuante\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1381105558 c:\users\luciano\desktop\veriproc\17 - ponto flutuante\compilador c\labels.h
+
+1381177902 source:c:\users\luciano\desktop\veriproc\17 - ponto flutuante\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1383579778 c:\users\luciano\desktop\veriproc\17 - ponto flutuante\compilador c\variaveis.h
+
+1417748050 source:c:\users\eder\desktop\17_-_ponto_flutuante-2014-12-05\17 - ponto flutuante\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1417748058 c:\users\eder\desktop\17_-_ponto_flutuante-2014-12-05\17 - ponto flutuante\compilador c\labels.h
+
+1417748080 source:c:\users\eder\desktop\17_-_ponto_flutuante-2014-12-05\17 - ponto flutuante\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1417748082 c:\users\eder\desktop\17_-_ponto_flutuante-2014-12-05\17 - ponto flutuante\compilador c\variaveis.h
+
+1417748050 source:c:\users\eder\desktop\17_-_ponto_flutuante-2014-12-05\17 - ponto flutuante\compiladores\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1417748058 c:\users\eder\desktop\17_-_ponto_flutuante-2014-12-05\17 - ponto flutuante\compiladores\compilador c\labels.h
+
+1417748080 source:c:\users\eder\desktop\17_-_ponto_flutuante-2014-12-05\17 - ponto flutuante\compiladores\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1417748082 c:\users\eder\desktop\17_-_ponto_flutuante-2014-12-05\17 - ponto flutuante\compiladores\compilador c\variaveis.h
+
+1417748050 source:c:\users\eder\desktop\17_-_ponto_flutuante-2014-12-05\17 - ponto flutuante\compiladores\zerocrossing\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1417748058 c:\users\eder\desktop\17_-_ponto_flutuante-2014-12-05\17 - ponto flutuante\compiladores\zerocrossing\compilador c\labels.h
+
+1417748080 source:c:\users\eder\desktop\17_-_ponto_flutuante-2014-12-05\17 - ponto flutuante\compiladores\zerocrossing\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1417748082 c:\users\eder\desktop\17_-_ponto_flutuante-2014-12-05\17 - ponto flutuante\compiladores\zerocrossing\compilador c\variaveis.h
+
+1417748080 source:c:\users\eder\desktop\85_retoques_finais\85.4_nov_proc_div\compiladores\pll\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1418138178 c:\users\eder\desktop\85_retoques_finais\85.4_nov_proc_div\compiladores\pll\compilador c\variaveis.h
+
+1418138187 source:c:\users\eder\desktop\85_retoques_finais\85.4_nov_proc_div\compiladores\pll\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1417748058 c:\users\eder\desktop\85_retoques_finais\85.4_nov_proc_div\compiladores\pll\compilador c\labels.h
+
+1418138187 source:c:\users\eder\desktop\85_retoques_finais\85.5_nov_proc_div\compiladores\pll\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1417748058 c:\users\eder\desktop\85_retoques_finais\85.5_nov_proc_div\compiladores\pll\compilador c\labels.h
+
+1417748080 source:c:\users\eder\desktop\85_retoques_finais\85.5_nov_proc_div\compiladores\pll\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1418138178 c:\users\eder\desktop\85_retoques_finais\85.5_nov_proc_div\compiladores\pll\compilador c\variaveis.h
+
+1418138187 source:c:\users\eder\desktop\85_retoques_finais\85.6_nov_proc_div_mant_maior\compiladores\pll\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1417748058 c:\users\eder\desktop\85_retoques_finais\85.6_nov_proc_div_mant_maior\compiladores\pll\compilador c\labels.h
+
+1417748080 source:c:\users\eder\desktop\85_retoques_finais\85.6_nov_proc_div_mant_maior\compiladores\pll\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1418138178 c:\users\eder\desktop\85_retoques_finais\85.6_nov_proc_div_mant_maior\compiladores\pll\compilador c\variaveis.h
+
+1418138187 source:c:\users\luciano\desktop\compressor\software\proc_ip\software\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1417748058 c:\users\luciano\desktop\compressor\software\proc_ip\software\compilador c\labels.h
+
+1417748080 source:c:\users\luciano\desktop\compressor\software\proc_ip\software\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1418138178 c:\users\luciano\desktop\compressor\software\proc_ip\software\compilador c\variaveis.h
+
+1418138187 source:c:\users\luciano\desktop\compressor\compressor\proc_ip\software\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1417748058 c:\users\luciano\desktop\compressor\compressor\proc_ip\software\compilador c\labels.h
+
+1422516692 source:c:\users\luciano\desktop\compressor\compressor\proc_ip\software\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1422519040 c:\users\luciano\desktop\compressor\compressor\proc_ip\software\compilador c\variaveis.h
+
+1422517055 source:c:\users\luciano\desktop\compressor\compressor\proc_ip\software\compilador c\t2t.c
+	"t2t.h"
+	<string.h>
+	<stdlib.h>
+	<math.h>
+
+1422098038 c:\users\luciano\desktop\compressor\compressor\proc_ip\software\compilador c\t2t.h
+	<stdio.h>
+
+1418138187 source:c:\users\luciano\desktop\proc\proc_ip\software\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1417748058 c:\users\luciano\desktop\proc\proc_ip\software\compilador c\labels.h
+
+1422517055 source:c:\users\luciano\desktop\proc\proc_ip\software\compilador c\t2t.c
+	"t2t.h"
+	<string.h>
+	<stdlib.h>
+	<math.h>
+
+1422098038 c:\users\luciano\desktop\proc\proc_ip\software\compilador c\t2t.h
+	<stdio.h>
+
+1422516692 source:c:\users\luciano\desktop\proc\proc_ip\software\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1422519040 c:\users\luciano\desktop\proc\proc_ip\software\compilador c\variaveis.h
+
+1418138187 source:c:\users\luciano\desktop\20 - final\proc_ip\software\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1417748058 c:\users\luciano\desktop\20 - final\proc_ip\software\compilador c\labels.h
+
+1422517055 source:c:\users\luciano\desktop\20 - final\proc_ip\software\compilador c\t2t.c
+	"t2t.h"
+	<string.h>
+	<stdlib.h>
+	<math.h>
+
+1422098038 c:\users\luciano\desktop\20 - final\proc_ip\software\compilador c\t2t.h
+	<stdio.h>
+
+1423565412 source:c:\users\luciano\desktop\20 - final\proc_ip\software\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1423483565 c:\users\luciano\desktop\20 - final\proc_ip\software\compilador c\variaveis.h
+
+1424432645 source:c:\users\luciano\desktop\20-final\proc_ip\software\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1417744458 c:\users\luciano\desktop\20-final\proc_ip\software\compilador c\labels.h
+
+1423906496 source:c:\users\luciano\desktop\20-final\proc_ip\software\compilador c\t2t.c
+	"t2t.h"
+	<string.h>
+	<stdlib.h>
+	<math.h>
+
+1423906463 c:\users\luciano\desktop\20-final\proc_ip\software\compilador c\t2t.h
+	<stdio.h>
+
+1423561812 source:c:\users\luciano\desktop\20-final\proc_ip\software\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1425307196 c:\users\luciano\desktop\20-final\proc_ip\software\compilador c\variaveis.h
+
+1424436246 source:c:\users\melis\desktop\sapho_v3\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1417748058 c:\users\melis\desktop\sapho_v3\compilador c\labels.h
+
+1425307200 source:c:\users\melis\desktop\sapho_v3\compilador c\lex.yy.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<io.h>
+	<stdlib.h>
+	<string.h>
+	"y.tab.h"
+	"variaveis.h"
+	"t2t.h"
+	<stdlib.h>
+
+1425307198 c:\users\melis\desktop\sapho_v3\compilador c\y.tab.h
+
+1425307196 c:\users\melis\desktop\sapho_v3\compilador c\variaveis.h
+
+1423910064 c:\users\melis\desktop\sapho_v3\compilador c\t2t.h
+	<stdio.h>
+
+1423910096 source:c:\users\melis\desktop\sapho_v3\compilador c\t2t.c
+	"t2t.h"
+	<string.h>
+	<stdlib.h>
+	<math.h>
+
+1423565412 source:c:\users\melis\desktop\sapho_v3\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1425307198 source:c:\users\melis\desktop\sapho_v3\compilador c\y.tab.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"variaveis.h"
+	"labels.h"
+	"t2t.h"
+	<stddef.h>
+	<libintl.h>
+	<alloca.h>
+	<malloc.h>
+	<stdlib.h>
+	<stdlib.h>
+	<stdio.h>
+
