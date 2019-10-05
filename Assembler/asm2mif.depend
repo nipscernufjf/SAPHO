@@ -1323,3 +1323,115 @@
 	"eval.h"
 	"mnemonicos.h"
 
+1424115964 source:c:\users\melis\desktop\assembler\eval.c
+	"eval.h"
+	"t2t.h"
+	"variaveis.h"
+	"labels.h"
+	"veri_comp.h"
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+
+1570216009 c:\users\melis\desktop\assembler\eval.h
+
+1417748114 c:\users\melis\desktop\assembler\t2t.h
+
+1417748120 c:\users\melis\desktop\assembler\variaveis.h
+
+1417748110 c:\users\melis\desktop\assembler\labels.h
+
+1421379024 c:\users\melis\desktop\assembler\veri_comp.h
+
+1425384524 source:c:\users\melis\desktop\assembler\labels.c
+	"labels.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
+1421064800 source:c:\users\melis\desktop\assembler\mnemonicos.c
+	"mnemonicos.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1421064766 c:\users\melis\desktop\assembler\mnemonicos.h
+
+1417748112 source:c:\users\melis\desktop\assembler\t2t.c
+	"t2t.h"
+	<string.h>
+	<stdlib.h>
+	<math.h>
+	"veri_comp.h"
+
+1425384554 source:c:\users\melis\desktop\assembler\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1425384472 source:c:\users\melis\desktop\assembler\veri_comp.c
+	"veri_comp.h"
+	<string.h>
+	<stdio.h>
+	<math.h>
+	"eval.h"
+	"mnemonicos.h"
+
+1424115964 source:c:\users\melis\documents\github\sapho\assembler\eval.c
+	"eval.h"
+	"t2t.h"
+	"variaveis.h"
+	"labels.h"
+	"veri_comp.h"
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+
+1570216009 c:\users\melis\documents\github\sapho\assembler\eval.h
+
+1417748114 c:\users\melis\documents\github\sapho\assembler\t2t.h
+
+1417748120 c:\users\melis\documents\github\sapho\assembler\variaveis.h
+
+1417748110 c:\users\melis\documents\github\sapho\assembler\labels.h
+
+1421379024 c:\users\melis\documents\github\sapho\assembler\veri_comp.h
+
+1425384524 source:c:\users\melis\documents\github\sapho\assembler\labels.c
+	"labels.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
+1421064800 source:c:\users\melis\documents\github\sapho\assembler\mnemonicos.c
+	"mnemonicos.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1421064766 c:\users\melis\documents\github\sapho\assembler\mnemonicos.h
+
+1417748112 source:c:\users\melis\documents\github\sapho\assembler\t2t.c
+	"t2t.h"
+	<string.h>
+	<stdlib.h>
+	<math.h>
+	"veri_comp.h"
+
+1425384554 source:c:\users\melis\documents\github\sapho\assembler\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1425384472 source:c:\users\melis\documents\github\sapho\assembler\veri_comp.c
+	"veri_comp.h"
+	<string.h>
+	<stdio.h>
+	<math.h>
+	"eval.h"
+	"mnemonicos.h"
+

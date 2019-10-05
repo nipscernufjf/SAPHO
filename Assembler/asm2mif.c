@@ -1020,12 +1020,12 @@ YY_RULE_SETUP
 case 59:
 YY_RULE_SETUP
 #line 79 "asm2mif.l"
-eval_opcode(44,1);
+eval_opcode(50,1);
 	YY_BREAK
 case 60:
 YY_RULE_SETUP
 #line 80 "asm2mif.l"
-eval_opcode(45,1);
+eval_opcode(51,1);
 	YY_BREAK
 case 61:
 YY_RULE_SETUP
