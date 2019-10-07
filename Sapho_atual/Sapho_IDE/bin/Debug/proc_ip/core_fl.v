@@ -127,7 +127,7 @@ wire  [NBMANT+NBEXPO:0] out;
 // wire neg = 1;
 
 
-positivo #(NBMANT, NBEXPO) positivo(ula_out, id_neg, out);
+positivo_fl #(NBMANT, NBEXPO) positivo_fl(ula_out, id_neg, out);
 										//////////////////////////////////////////////////////////////
 
 reg signed [NBMANT+NBEXPO:0] racc;
