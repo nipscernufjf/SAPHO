@@ -86,7 +86,6 @@ wire [NUBITS-1:0] id_ula_data;
 
 wire [MDATAW-1:0] id_mem_addr;
 wire              id_srf;
-wire              id_neg;
 
 instr_dec_fx #(NUBITS, NBOPCO, NBOPER, MDATAW) id(clk, rst,
                                                id_opcode, id_operand,
@@ -94,7 +93,7 @@ instr_dec_fx #(NUBITS, NBOPCO, NBOPER, MDATAW) id(clk, rst,
                                                id_ula_op, id_ula_data,
                                                mem_wr, id_mem_addr, mem_data_in,
                                                io_in, req_in, out_en,
-                                               id_srf, id_neg);
+                                               id_srf);
 
 // Ponteiro pra pilha de dados ------------------------------------------------
 
@@ -131,24 +130,17 @@ ula_fx #(.NUBITS(NUBITS),
 
 // Acumulador -----------------------------------------------------------------
 
-///////////////////////////////
-wire  [NUBITS-1:0] out;
-
-positivo_fx #(NUBITS) positivo_fx(ula_out, id_neg, out);
-/////////////////////////////////
-
 reg signed [NUBITS-1:0] racc;
 
 always @ (posedge clk or posedge rst) begin
 	if (rst)
 		racc <= 0;
 	else
-		racc <= out;  //racc <= ula_out;
-		
+		racc <= ula_out;
 end
 
 assign ula_acc = racc;
-assign pf_acc  = out[0]; //ula_out[0];
+assign pf_acc  = ula_out[0];
 
 // Register File --------------------------------------------------------------
 
@@ -178,7 +170,7 @@ endgenerate
 
 // Interface externa ----------------------------------------------------------
 
-assign data_out   = out;  //ula_out;
+assign data_out   =  ula_out;
 assign mem_addr_w = (sp_push   ) ? sp_addr_w : rf;
 assign mem_addr_r = (sp_pop    ) ? sp_addr_r : rf;
 
