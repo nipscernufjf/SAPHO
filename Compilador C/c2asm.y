@@ -174,7 +174,7 @@ declar_full: declar
 assignment: ID '=' exp ';'                 {var_set($1,$3,0,0);}
           | ID '@' exp ';'                 {var_set($1,$3,0,1);}
           | ID '[' exp ']' '='             {array_check($1,$3);}
-            exp ';'                        {var_set($1,$7,1);};
+            exp ';'                        {var_set($1,$7,1,0);};
 
 // expressoes -----------------------------------------------------------------
 

@@ -11,7 +11,7 @@
 
 void main()
 {
-    int a = 1.0 == 2.0;
-    int b = 3.0 == 4.0;
-    if (a && b) ;
+    int a = -1;
+    int b@a;
+
 }
