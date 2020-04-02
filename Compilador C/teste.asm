@@ -9,13 +9,9 @@ LOAD 0
 #SDEPTH 5
 #NUIOIN 34
 #NUIOOU 19
-@main LOAD 2.0
-EQU 1.0
+@main LOAD 1
+NEG
 SET maina
-LOAD 4.0
-EQU 3.0
-SET mainb
-LOAD mainb
-LAND maina
-JZ L1else
-@L1else @fim JMP fim
+LOAD maina
+PSET mainb
+@fim JMP fim

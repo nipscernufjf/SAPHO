@@ -671,3 +671,56 @@
 	<stdlib.h>
 	<stdio.h>
 
+1583888088 source:c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1583888088 c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\labels.h
+
+1583888088 source:c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\lex.yy.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<io.h>
+	<stdlib.h>
+	<string.h>
+	"y.tab.h"
+	"variaveis.h"
+	"t2t.h"
+	<stdlib.h>
+
+1583888088 c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\y.tab.h
+
+1583888088 c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\variaveis.h
+
+1583888088 c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\t2t.h
+	<stdio.h>
+
+1583888088 source:c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\t2t.c
+	"t2t.h"
+	<string.h>
+	<stdlib.h>
+	<math.h>
+
+1583888088 source:c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1583888088 source:c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\y.tab.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"variaveis.h"
+	"labels.h"
+	"t2t.h"
+	<stddef.h>
+	<libintl.h>
+	<alloca.h>
+	<malloc.h>
+	<stdlib.h>
+	<stdlib.h>
+	<stdio.h>
+
