@@ -85,7 +85,7 @@ namespace Sapho_IDE
             //number highlighting
             e.ChangedRange.SetStyle(MagentaStyle, @"\b\d+[\.]?\d*([eE]\-?\d+)?[lLdDfF]?\b|\b0x[a-fA-F\d]+\b");
             //keyword highlighting
-            e.ChangedRange.SetStyle(BlueStyle, @"\b(if|else|while|int|float|float|void)\b|#region\b|#endregion\b");
+            e.ChangedRange.SetStyle(BlueStyle, @"\b(if|@|else|while|int|float|float|void|out|return|)\b|#region\b|#endregion\b");
 
             //clear folding markers
             e.ChangedRange.ClearFoldingMarkers();
