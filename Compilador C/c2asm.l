@@ -81,6 +81,7 @@ LETRA  [A-Za-z_]
 "!="                          return     DIF;
 "&&"                          return    LAND;
 "||"                          return     LOR;
+"/>"                          return    NORM;
 
 \n                            line_num++;
 

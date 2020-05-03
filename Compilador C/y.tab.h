@@ -68,7 +68,8 @@
      EQU = 284,
      DIF = 285,
      LAND = 286,
-     LOR = 287
+     LOR = 287,
+     NORM = 288
    };
 #endif
 /* Tokens.  */
@@ -102,6 +103,7 @@
 #define DIF 285
 #define LAND 286
 #define LOR 287
+#define NORM 288
 
 
 

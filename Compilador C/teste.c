@@ -10,12 +10,16 @@
 #NUIOOU 19
 
 
-
+int max(int num1)
+{
+	num1 = num1 + 4;
+	return num1;
+}
 
 void main()
 {
-    int a = -5;
-    int b;
-    b@a;
+    int a = />-5;
+    b = max(a);
+    	
 
 }

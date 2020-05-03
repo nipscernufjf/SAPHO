@@ -53,6 +53,7 @@ void exec_out2  (int et);
 %token WHILE IF ELSE
 %token SHIFTL SHIFTR SSHIFTR
 %token GREQU LESEQ EQU DIF LAND LOR
+%token NORM
 
 %right ','
 
@@ -67,6 +68,7 @@ void exec_out2  (int et);
 %left '+' '-'
 %left '*' '/' '%'
 %left '!' '~'
+%left NORM
 
 %%
 
@@ -208,6 +210,7 @@ exp:       INUM                            {                    $$ = load($1,1,1
          | exp LESEQ exp                   {     operacoes($1,$3, "GRE", "CALL denorm\nLOAD float_aux3\nGRE float_aux1", &fgen); $$ = OFST; fprintf(f_asm, "LINV\n");}
          | exp EQU exp                     {     operacoes($1,$3, "EQU", "CALL denorm\nLOAD float_aux3\nEQU float_aux1", &fgen); $$ = OFST;}
          | exp DIF exp                     {     operacoes($1,$3, "EQU", "CALL denorm\nLOAD float_aux3\nEQU float_aux1", &fgen); $$ = OFST; fprintf(f_asm, "LINV\n");}
+         | NORM exp                        {$$ = int_oper ($2, 0, "/>"  , "NORM", 0);}
 
 %%
 
