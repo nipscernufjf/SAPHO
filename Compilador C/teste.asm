@@ -21,7 +21,4 @@ NORM
 SET maina
 LOAD maina
 CALL max
-PLD 0
-PLD mainb
-OUT
 RETURN
