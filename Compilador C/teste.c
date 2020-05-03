@@ -9,9 +9,13 @@
 #NUIOIN 34
 #NUIOOU 19
 
+
+
+
 void main()
 {
-    int a = -1;
-    int b@a;
+    int a = -5;
+    int b;
+    b@a;
 
 }

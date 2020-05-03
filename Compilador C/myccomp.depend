@@ -724,3 +724,27 @@
 	<stdlib.h>
 	<stdio.h>
 
+1586477307 source:e:\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1583888088 e:\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\labels.h
+
+1583888088 source:e:\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\t2t.c
+	"t2t.h"
+	<string.h>
+	<stdlib.h>
+	<math.h>
+
+1583888088 e:\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\t2t.h
+	<stdio.h>
+
+1587685488 source:e:\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1583888088 e:\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\variaveis.h
+

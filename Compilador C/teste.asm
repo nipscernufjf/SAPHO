@@ -1,4 +1,3 @@
-LOAD 0
 #PRNAME detetor_top
 #DIRNAM "C:"
 #DATYPE 1
@@ -9,8 +8,7 @@ LOAD 0
 #SDEPTH 5
 #NUIOIN 34
 #NUIOOU 19
-@main LOAD 1
-NEG
+@main LOAD -5
 SET maina
 LOAD maina
 PSET mainb
