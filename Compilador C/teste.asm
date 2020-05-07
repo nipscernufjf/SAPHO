@@ -1,4 +1,3 @@
-LOAD 0
 #PRNAME detetor_top
 #DIRNAM "C:"
 #DATYPE 1
@@ -9,9 +8,17 @@ LOAD 0
 #SDEPTH 5
 #NUIOIN 34
 #NUIOOU 19
-@main LOAD 1
-NEG
+CALL main
+@fim JMP fim
+@max SET maxnum1
+LOAD 4
+ADD maxnum1
+SET maxnum1
+LOAD maxnum1
+RETURN
+@main LOAD -5
+NORM
 SET maina
 LOAD maina
-PSET mainb
-@fim JMP fim
+CALL max
+RETURN

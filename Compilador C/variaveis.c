@@ -55,6 +55,7 @@ void check_var()
 
 char *rem_fname(char *var, char *fname)
 {
+    //fprintf(stderr, "var = %s, fname = %s\n", var, fname);
     int ind = 0;
     while (var[ind] == fname[ind])  ind++;
     return var + ind;

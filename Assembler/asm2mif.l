@@ -78,6 +78,7 @@ LINHA          \n
 "SSRS"   {eval_opcode(49,0); add_mne("SRS");}
 "PSET"   eval_opcode(50,1);
 "PSETP"  eval_opcode(51,1);
+"NORM"   {eval_opcode(52,0); add_mne("NRM");}
 
 {CONST}   eval_opernd(yytext,1);
 {STRIN}   eval_opernd(yytext+1,0);

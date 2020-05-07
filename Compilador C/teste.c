@@ -9,9 +9,17 @@
 #NUIOIN 34
 #NUIOOU 19
 
+
+int max(int num1)
+{
+	num1 = num1 + 4;
+	return num1;
+}
+
 void main()
 {
-    int a = -1;
-    int b@a;
+    int a = />-5;
+    b = max(a);
+    	
 
 }
