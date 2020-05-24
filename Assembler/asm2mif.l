@@ -28,6 +28,7 @@ LINHA          \n
 "#NUIOOU" eval_direct(12);
 "#DATYPE" eval_direct(13);
 "#DIRNAM" eval_direct(14);
+"#NUGAIN" eval_direct(15);
 
 "LOAD"    eval_opcode( 0,1);
 "PLD"     eval_opcode( 1,1);

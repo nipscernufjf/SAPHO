@@ -45,7 +45,7 @@ void exec_out1  (int et);
 void exec_out2  (int et);
 %}
 
-%token PRNAME DIRNAM DATYPE NUBITS NBMANT NBEXPO NDSTAC SDEPTH NUIOIN NUIOOU
+%token PRNAME DIRNAM DATYPE NUBITS NBMANT NBEXPO NDSTAC SDEPTH NUIOIN NUIOOU NUGAIN
 %token TYPE
 %token INUM FNUM ID STRING
 %token IN OUT
@@ -89,6 +89,7 @@ direct:   PRNAME  ID                       {fprintf(f_asm, "#PRNAME %s\n", v_nam
         | SDEPTH INUM                      {fprintf(f_asm, "#SDEPTH %s\n", v_name[$2]);}
         | NUIOIN INUM                      {fprintf(f_asm, "#NUIOIN %s\n", v_name[$2]);}
         | NUIOOU INUM                      {fprintf(f_asm, "#NUIOOU %s\n", v_name[$2]);};
+        | NUGAIN INUM                      {fprintf(f_asm, "#NUGAIN %s\n", v_name[$2]);};
 
 // Declaracao de variaveis ----------------------------------------------------
 

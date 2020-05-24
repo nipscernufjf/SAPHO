@@ -8,7 +8,7 @@
 char name[128];
 char  tmp[512];
 FILE *f_veri;
-int sdepth, nuioin2, nuioou; // nuioin eh usado internamente pelo flex e da pau -> usar nuioin2!!
+int sdepth, nuioin2, nuioou, nugain; // nuioin eh usado internamente pelo flex e da pau -> usar nuioin2!!
 
 void set_name(char *va)
 {
@@ -87,6 +87,13 @@ void set_dir(char* dir)
     strcpy(d_name, dir);
 }
 
+void set_nugain(int n)
+{
+    nugain = n;
+}
+
+
+
 char *barra_fix(char *dir)
 {
     int i;
@@ -136,6 +143,7 @@ void build_vfile()
     fprintf(f_veri, ".SDEPTH(%d),\n", sdepth);
     fprintf(f_veri, ".NUIOIN(%d),\n", nuioin2);
     fprintf(f_veri, ".NUIOOU(%d),\n", nuioou);
+    fprintf(f_veri, ".NUGAIN(%d),\n", nugain);
 
     int i;
     for (i = 0; i < m_count; i++) fprintf(f_veri, ".%s(1),\n", m_name[i]);

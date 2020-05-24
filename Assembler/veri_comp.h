@@ -16,6 +16,7 @@ void set_ndstac     (int n);
 void set_sdepth     (int n);
 void set_nuioin     (int n);
 void set_nuioou     (int n);
+void set_nugain     (int n);
 void set_float_point(int n);
 void set_dir        (char* dir);
 
