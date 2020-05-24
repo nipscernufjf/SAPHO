@@ -10,6 +10,7 @@ module core_fx
 	parameter MDATAS = 512,             // Numero de enderecos da memoria de dados
 	parameter NUIOIN = 8,               // Numero de enderecos de IO - entrada
 	parameter NUIOOU = 8,               // Numero de enderecos de IO - saida
+	parameter NUGAIN = 64,              // Valor de deslocamento dos bits (divisao)
 
 	parameter DIV   =  0,               // Cria circuito de divisao
 	parameter OR    =  0,
@@ -112,6 +113,7 @@ wire signed [NUBITS-1:0] ula_out;
 wire signed [NUBITS-1:0] ula_acc;
 
 ula_fx #(.NUBITS(NUBITS),
+			.NUGAIN(NUGAIN),
          .DIV   (DIV   ),
          .OR    (OR    ),
          .LOR   (LOR   ),
