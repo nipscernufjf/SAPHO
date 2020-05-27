@@ -49,26 +49,28 @@
      SDEPTH = 265,
      NUIOIN = 266,
      NUIOOU = 267,
-     TYPE = 268,
-     INUM = 269,
-     FNUM = 270,
-     ID = 271,
-     STRING = 272,
-     IN = 273,
-     OUT = 274,
-     RETURN = 275,
-     WHILE = 276,
-     IF = 277,
-     ELSE = 278,
-     SHIFTL = 279,
-     SHIFTR = 280,
-     SSHIFTR = 281,
-     GREQU = 282,
-     LESEQ = 283,
-     EQU = 284,
-     DIF = 285,
-     LAND = 286,
-     LOR = 287
+     NUGAIN = 268,
+     TYPE = 269,
+     INUM = 270,
+     FNUM = 271,
+     ID = 272,
+     STRING = 273,
+     IN = 274,
+     OUT = 275,
+     RETURN = 276,
+     WHILE = 277,
+     IF = 278,
+     ELSE = 279,
+     SHIFTL = 280,
+     SHIFTR = 281,
+     SSHIFTR = 282,
+     GREQU = 283,
+     LESEQ = 284,
+     EQU = 285,
+     DIF = 286,
+     LAND = 287,
+     LOR = 288,
+     NORM = 289
    };
 #endif
 /* Tokens.  */
@@ -82,26 +84,28 @@
 #define SDEPTH 265
 #define NUIOIN 266
 #define NUIOOU 267
-#define TYPE 268
-#define INUM 269
-#define FNUM 270
-#define ID 271
-#define STRING 272
-#define IN 273
-#define OUT 274
-#define RETURN 275
-#define WHILE 276
-#define IF 277
-#define ELSE 278
-#define SHIFTL 279
-#define SHIFTR 280
-#define SSHIFTR 281
-#define GREQU 282
-#define LESEQ 283
-#define EQU 284
-#define DIF 285
-#define LAND 286
-#define LOR 287
+#define NUGAIN 268
+#define TYPE 269
+#define INUM 270
+#define FNUM 271
+#define ID 272
+#define STRING 273
+#define IN 274
+#define OUT 275
+#define RETURN 276
+#define WHILE 277
+#define IF 278
+#define ELSE 279
+#define SHIFTL 280
+#define SHIFTR 281
+#define SSHIFTR 282
+#define GREQU 283
+#define LESEQ 284
+#define EQU 285
+#define DIF 286
+#define LAND 287
+#define LOR 288
+#define NORM 289
 
 
 

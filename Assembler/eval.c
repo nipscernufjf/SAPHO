@@ -124,6 +124,8 @@ void eval_opernd(char *va, int is_const)
                      set_dir(va);
                  }
                  state = 0; break;
+        case 15: if (pp) set_nugain(atoi(va));
+                 state = 0; break;
     }
 }
 

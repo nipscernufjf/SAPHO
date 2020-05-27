@@ -23,7 +23,7 @@ int ret_ok = 0; // status de retorno da funcao atual;
 int acc_id;     // id da ultima variavel carregada no acumulador
 
 int   load      (int id, int is_const, int dtype, int is_array);
-void  load_check(int et);
+void  load_check(int et, int sinal);
 void  yyerror   (char  const *s);
 void  func_ret  (int id);
 void  var_set   (int id, int et, int is_array, int is_pos);
@@ -45,7 +45,7 @@ void exec_out1  (int et);
 void exec_out2  (int et);
 %}
 
-%token PRNAME DIRNAM DATYPE NUBITS NBMANT NBEXPO NDSTAC SDEPTH NUIOIN NUIOOU
+%token PRNAME DIRNAM DATYPE NUBITS NBMANT NBEXPO NDSTAC SDEPTH NUIOIN NUIOOU NUGAIN
 %token TYPE
 %token INUM FNUM ID STRING
 %token IN OUT
@@ -53,6 +53,7 @@ void exec_out2  (int et);
 %token WHILE IF ELSE
 %token SHIFTL SHIFTR SSHIFTR
 %token GREQU LESEQ EQU DIF LAND LOR
+%token NORM
 
 %right ','
 
@@ -67,6 +68,7 @@ void exec_out2  (int et);
 %left '+' '-'
 %left '*' '/' '%'
 %left '!' '~'
+%left NORM
 
 %%
 
@@ -87,6 +89,7 @@ direct:   PRNAME  ID                       {fprintf(f_asm, "#PRNAME %s\n", v_nam
         | SDEPTH INUM                      {fprintf(f_asm, "#SDEPTH %s\n", v_name[$2]);}
         | NUIOIN INUM                      {fprintf(f_asm, "#NUIOIN %s\n", v_name[$2]);}
         | NUIOOU INUM                      {fprintf(f_asm, "#NUIOOU %s\n", v_name[$2]);};
+        | NUGAIN INUM                      {fprintf(f_asm, "#NUGAIN %s\n", v_name[$2]);};
 
 // Declaracao de variaveis ----------------------------------------------------
 
@@ -153,7 +156,7 @@ stmt_if:  if_exp stmt                      {acc_id = -1; fprintf(f_asm, "@L%dels
 ifelse_stmt: if_exp_stmt ELSE stmt_full    {acc_id = -1; fprintf(f_asm, "@L%dend ", pop_lab());};
 if_exp_stmt: if_exp stmt_full              {acc_id = -1; fprintf(f_asm, "JMP L%dend\n@L%delse ", get_lab(), get_lab());};
 
-if_exp:   IF '(' exp ')'                   {load_check($3); fprintf(f_asm, "JZ L%delse\n", push_lab()); acc_ok = 0; acc_id = -1;};
+if_exp:   IF '(' exp ')'                   {load_check($3, 0); fprintf(f_asm, "JZ L%delse\n", push_lab()); acc_ok = 0; acc_id = -1;};
 
 // while ----------------------------------------------------------------------
 
@@ -161,7 +164,7 @@ while_stmt: while_exp stmt_full            {acc_id = -1; fprintf(f_asm, "JMP L%d
 while_if  : while_exp stmt_if              {acc_id = -1; fprintf(f_asm, "JMP L%d\n@L%dend ", pop_lab(), get_lab());};
 
 while_exp: WHILE                           {acc_id = -1; fprintf(f_asm, "@L%d ", push_lab());}
-          '(' exp ')'                      {load_check($4); fprintf(f_asm, "JZ L%dend\n", get_lab()); acc_ok = 0;};
+          '(' exp ')'                      {load_check($4, 0); fprintf(f_asm, "JZ L%dend\n", get_lab()); acc_ok = 0;};
 
 // declaracoes de variaveis ---------------------------------------------------
 
@@ -186,7 +189,7 @@ exp:       INUM                            {                    $$ = load($1,1,1
          | func_call                       {$$ =     $1*OFST;}
          | '(' exp ')'                     {$$ =         $2 ;}
          | '+' exp                         {$$ =         $2 ;}
-         | '-' exp                         {$$ = negacao($2);}
+         | '-' exp                         {$$ = neg($2);}
          | '!' exp                         {$$ = int_oper ($2, 0, "!"  , "LINV", 1);}
          | '~' exp                         {$$ = int_oper ($2, 0, "~"  ,  "INV", 0);}
          | exp '%' exp                     {$$ = int_oper ($1,$3, "%"  ,  "MOD", 0);}
@@ -208,6 +211,7 @@ exp:       INUM                            {                    $$ = load($1,1,1
          | exp LESEQ exp                   {     operacoes($1,$3, "GRE", "CALL denorm\nLOAD float_aux3\nGRE float_aux1", &fgen); $$ = OFST; fprintf(f_asm, "LINV\n");}
          | exp EQU exp                     {     operacoes($1,$3, "EQU", "CALL denorm\nLOAD float_aux3\nEQU float_aux1", &fgen); $$ = OFST;}
          | exp DIF exp                     {     operacoes($1,$3, "EQU", "CALL denorm\nLOAD float_aux3\nEQU float_aux1", &fgen); $$ = OFST; fprintf(f_asm, "LINV\n");}
+         | NORM exp                        {$$ = int_oper ($2, 0, "/>"  , "NORM", 0);}
 
 %%
 
@@ -217,7 +221,7 @@ int main(int argc, char *argv[])
 	f_asm  = fopen(argv[2], "w");
 
     float_init();
-    fprintf(f_asm, "LOAD 0\n");
+    //fprintf(f_asm, "LOAD 0\n");
 	yyparse();
 	fclose(yyin );
 	fclose(f_asm);
@@ -257,19 +261,26 @@ int load(int id, int is_const, int dtype, int is_array)
 
     if (is_array == 1)
     {
-         load_check(dtype*OFST+id);
+         load_check(dtype*OFST+id, 0);
          return dtype*OFST;
     }
     else return dtype*OFST+id;
 }
 
-void load_check(int et)
+void load_check(int et, int sinal)
 {
     int id = et % OFST;
 
     if (v_isar[id] == 1)
     {
+      if(sinal == 0)
+      {
         fprintf(f_asm, "PUSH\nSRF\nLOAD %s\n", v_name[id]);
+      }
+      else
+      {
+        fprintf(f_asm, "PUSH\nSRF\nLOAD -%s\n", v_name[id]);
+      }
     }
     else
     {
@@ -287,10 +298,29 @@ void load_check(int et)
         {
             if (acc_ok == 0)
             {
-                /*if (acc_id != id)*/ fprintf(f_asm, "LOAD %s\n", num);
+                /*if (acc_id != id)*/
+                if(sinal == 0)
+                {
+                  fprintf(f_asm, "LOAD %s\n", num);
+                }
+                else
+                {
+                  fprintf(f_asm, "LOAD -%s\n", num);
+                }
             }
-            else                  // se acc carregado
-                fprintf(f_asm,  "PLD %s\n", num);
+            else
+            {
+
+                                // se acc carregado
+                if(sinal == 0)
+                {
+                    fprintf(f_asm, "PLD %s\n", num);
+                }
+                else
+                {
+                    fprintf(f_asm, "PLD -%s\n", num);
+                }
+            }
         }
     }
 
@@ -319,7 +349,7 @@ void func_ret(int id)
 
 void var_set(int id, int et, int is_array, int is_pos)
 {
-    load_check(et);
+    load_check(et,0);
 
     if (v_type[id] == 0)
     {
@@ -375,9 +405,17 @@ void var_set(int id, int et, int is_array, int is_pos)
     v_asgn[id] = 1;
 }
 
+
+int neg(int et)
+{
+    load_check(et, 1);
+    return (et < 2*OFST) ? OFST : 2*OFST;
+
+}
+
 int negacao(int et)
 {
-    load_check(et);
+    load_check(et, 0);
 
     if (prtype == 1)
         fprintf(f_asm, "NEG\n");
@@ -415,12 +453,12 @@ int operacoes(int et1, int et2, char *iop, char *fop, int *op)
     {
              if ((et1 % OFST != 0) && (et2 % OFST != 0))         // memoria e memoria
         {
-            load_check(et2);
+            load_check(et2, 0);
             fprintf(f_asm, "%s %s\n", iop, v_name[et1 % OFST]);
         }
         else if ((et1 % OFST == 0) && (et2 % OFST != 0))         // acc e memoria
         {
-            load_check(et2);
+            load_check(et2, 0);
             fprintf(f_asm, "S%s\n", iop);
         }
         else if ((et1 % OFST != 0) && (et2 % OFST == 0))         // memoria e acc
@@ -436,22 +474,22 @@ int operacoes(int et1, int et2, char *iop, char *fop, int *op)
     {
              if (imem(et1) && imem(et2))                         // int memoria e int memoria
         {
-            load_check(et2);
+            load_check(et2, 0);
             fprintf(f_asm, "%s %s\n", iop, v_name[et1 % OFST]);
         }
         else if (imem(et1) && fmem(et2))                         // int memoria e float memoria
         {
-            load_check(et1);
+            load_check(et1, 0);
             fprintf(f_asm, "CALL int2float\n");
-            load_check(et2);
+            load_check(et2, 0);
             fprintf(f_asm, "%s\n", fop);
             *op = 1;
             i2f = 1;
         }
         else if (fmem(et1) && imem(et2))                         // float memoria e int memoria
         {
-            load_check(et1);
-            load_check(et2);
+            load_check(et1, 0);
+            load_check(et2, 0);
             fprintf(f_asm, "CALL int2float\n");
             fprintf(f_asm, "%s\n", fop);
             *op = 1;
@@ -459,27 +497,27 @@ int operacoes(int et1, int et2, char *iop, char *fop, int *op)
         }
         else if (fmem(et1) && fmem(et2))                         // float memoria e float memoria
         {
-            load_check(et1);
-            load_check(et2);
+            load_check(et1, 0);
+            load_check(et2, 0);
             fprintf(f_asm, "%s\n", fop);
             *op = 1;
         }
         else if (iacc(et1) && imem(et2))                         // int acc e int memoria
         {
-            load_check(et2);
+            load_check(et2, 0);
             fprintf(f_asm, "S%s\n", iop);
         }
         else if (iacc(et1) && fmem(et2))                         // int acc e float memoria
         {
             fprintf(f_asm, "CALL int2float\n");
-            load_check(et2);
+            load_check(et2, 0);
             fprintf(f_asm, "%s\n", fop);
             *op = 1;
             i2f = 1;
         }
         else if (facc(et1) && imem(et2))                         // float acc e int memoria
         {
-            load_check(et2);
+            load_check(et2, 0);
             fprintf(f_asm, "CALL int2float\n");
             fprintf(f_asm, "%s\n", fop);
             *op = 1;
@@ -487,7 +525,7 @@ int operacoes(int et1, int et2, char *iop, char *fop, int *op)
         }
         else if (facc(et1) && fmem(et2))                         // float acc e float memoria
         {
-            load_check(et2);
+            load_check(et2, 0);
             fprintf(f_asm, "%s\n", fop);
             *op = 1;
         }
@@ -503,7 +541,7 @@ int operacoes(int et1, int et2, char *iop, char *fop, int *op)
                 fprintf(f_asm, "SET float_aux5\nLOAD %s\nCALL int2float\nPLD float_aux5\n", v_name[et1 % OFST]);
             else
             {
-                load_check(et1);
+                load_check(et1, 0);
                 fprintf(f_asm, "CALL int2float\n");
             }
             fprintf(f_asm, "%s\n", fop);
@@ -519,11 +557,11 @@ int operacoes(int et1, int et2, char *iop, char *fop, int *op)
             {
                 fprintf(f_asm, "SET float_aux4\n");
                 acc_ok = 0;
-                load_check(et1);
+                load_check(et1, 0);
                 fprintf(f_asm, "PLD float_aux4\n");
             }
             else
-                load_check(et1);
+                load_check(et1, 0);
             fprintf(f_asm, "%s\n", fop);
             *op = 1;
             i2f = 1;
@@ -536,11 +574,11 @@ int operacoes(int et1, int et2, char *iop, char *fop, int *op)
             {
                 fprintf(f_asm, "SET float_aux4\n");
                 acc_ok = 0;
-                load_check(et1);
+                load_check(et1, 0);
                 fprintf(f_asm, "PLD float_aux4\n");
             }
             else
-                load_check(et1);
+                load_check(et1, 0);
             fprintf(f_asm, "%s\n", fop);
             *op = 1;
         }
@@ -601,8 +639,9 @@ int declar_par(int t, int id)
     return id;
 }
 
-void declar_fun(int id1, int id2)
+void declar_fun(int id1, int id2) //id1 -> tipo id2 -> indice para o nome; v_name -> tabela com os nomes
 {
+
     if ((mainok == 0) && (strcmp(v_name[id2], "main") != 0))
     {
         fprintf(f_asm, "CALL main\n@fim JMP fim\n");
@@ -618,7 +657,7 @@ void declar_fun(int id1, int id2)
 
 void declar_ret(int et)
 {
-    load_check(et);
+    load_check(et, 0);
 
     if ((v_type[fun_id1] != 4) && (v_type[fun_id1] != 5))
         fprintf (stderr, "Erro na linha %d: retorno em funcao void? hi o cara!\n", line_num+1);
@@ -658,8 +697,9 @@ int fcall(int id)
 
     if (get_npar(p_test) != get_npar(v_fpar[id]))
         fprintf(stderr, "Erro na linha %d: lista de parametros da funcao %s difere da original.\n", line_num+1, rem_fname(v_name[id], fname));
-
-    fprintf(f_asm, "CALL %s\n", rem_fname(v_name[id], fname));
+    //fprintf (stderr, "Indice %d, nome %s\n",id, v_name[id]);
+    fprintf(f_asm, "CALL %s\n",v_name[id]);
+    //fprintf(f_asm, "CALL %s\n", rem_fname(v_name[id], fname));
 
     v_used[id] = 1;
 
@@ -674,7 +714,7 @@ void vcall(int id)
     if (get_npar(p_test) != get_npar(v_fpar[id]))
         fprintf(stderr, "Erro na linha %d: lista de parametros da funcao %s difere da original.\n", line_num+1, rem_fname(v_name[id], fname));
 
-    fprintf(f_asm, "CALL %s\n", rem_fname(v_name[id], fname));
+    fprintf(f_asm, "CALL %s\n", v_name[id]);
 
     v_used[id] = 1;
     acc_ok     = 0;
@@ -690,7 +730,7 @@ int int_oper(int et1, int et2, char *op, char *code, int fok)
 
     if (et2 == 0)
     {
-        if (imem(et1)) load_check(et1);
+        if (imem(et1)) load_check(et1, 0);
         fprintf(f_asm, "%s\n", code);
     }
     else
@@ -710,7 +750,7 @@ void array_check(int id, int et)
         return;
     }
 
-    load_check(et);
+    load_check(et, 0);
 
     if (et >= 2*OFST)
     {
@@ -760,7 +800,7 @@ void par_check(int et)
     t_fun = t_fun % 10;
 
     // ufa, agora sim, posso testar os parametros
-    load_check(et);
+    load_check(et, 0);
 
     if ((t_fun == 1) && (t_cal == 2))
     {
@@ -784,7 +824,7 @@ void par_check(int et)
 
 int exec_in(int et)
 {
-    load_check(et);
+    load_check(et, 0);
 
     if (et >= 2*OFST)
     {
@@ -814,7 +854,7 @@ int get_type(int et)
 
 void exec_out1(int et)
 {
-    load_check(et);
+    load_check(et, 0);
 
     if (et >= 2*OFST)
     {
@@ -829,7 +869,7 @@ void exec_out1(int et)
 
 void exec_out2(int et)
 {
-    load_check(et);
+    load_check(et, 0);
 
     if ((et >= 2*OFST) && (prtype == 0))
     {

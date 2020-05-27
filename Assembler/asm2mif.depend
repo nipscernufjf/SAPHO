@@ -1435,3 +1435,115 @@
 	"eval.h"
 	"mnemonicos.h"
 
+1583888087 source:c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\assembler\eval.c
+	"eval.h"
+	"t2t.h"
+	"variaveis.h"
+	"labels.h"
+	"veri_comp.h"
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+
+1583888087 c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\assembler\eval.h
+
+1583888088 c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\assembler\t2t.h
+
+1583888088 c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\assembler\variaveis.h
+
+1583888087 c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\assembler\labels.h
+
+1583888088 c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\assembler\veri_comp.h
+
+1583888087 source:c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\assembler\labels.c
+	"labels.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
+1583888088 source:c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\assembler\mnemonicos.c
+	"mnemonicos.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1583888088 c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\assembler\mnemonicos.h
+
+1583888088 source:c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\assembler\t2t.c
+	"t2t.h"
+	<string.h>
+	<stdlib.h>
+	<math.h>
+	"veri_comp.h"
+
+1583888088 source:c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\assembler\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1583888088 source:c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\assembler\veri_comp.c
+	"veri_comp.h"
+	<string.h>
+	<stdio.h>
+	<math.h>
+	"eval.h"
+	"mnemonicos.h"
+
+1588781237 source:c:\users\luccaviccini\desktop\sapho-sapho_lucca\assembler\labels.c
+	"labels.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
+1588781237 c:\users\luccaviccini\desktop\sapho-sapho_lucca\assembler\labels.h
+
+1588781237 source:c:\users\luccaviccini\desktop\sapho-sapho_lucca\assembler\mnemonicos.c
+	"mnemonicos.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1588781237 c:\users\luccaviccini\desktop\sapho-sapho_lucca\assembler\mnemonicos.h
+
+1588781237 source:c:\users\luccaviccini\desktop\sapho-sapho_lucca\assembler\t2t.c
+	"t2t.h"
+	<string.h>
+	<stdlib.h>
+	<math.h>
+	"veri_comp.h"
+
+1588781237 c:\users\luccaviccini\desktop\sapho-sapho_lucca\assembler\t2t.h
+
+1590331112 c:\users\luccaviccini\desktop\sapho-sapho_lucca\assembler\veri_comp.h
+
+1588781237 source:c:\users\luccaviccini\desktop\sapho-sapho_lucca\assembler\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1588781237 c:\users\luccaviccini\desktop\sapho-sapho_lucca\assembler\variaveis.h
+
+1590331112 source:c:\users\luccaviccini\desktop\sapho-sapho_lucca\assembler\eval.c
+	"eval.h"
+	"t2t.h"
+	"variaveis.h"
+	"labels.h"
+	"veri_comp.h"
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+
+1588781237 c:\users\luccaviccini\desktop\sapho-sapho_lucca\assembler\eval.h
+
+1590331653 source:c:\users\luccaviccini\desktop\sapho-sapho_lucca\assembler\veri_comp.c
+	"veri_comp.h"
+	<string.h>
+	<stdio.h>
+	<math.h>
+	"eval.h"
+	"mnemonicos.h"
+

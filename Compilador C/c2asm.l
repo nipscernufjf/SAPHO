@@ -23,6 +23,7 @@ LETRA  [A-Za-z_]
 "#SDEPTH"                       return SDEPTH;
 "#NUIOIN"                       return NUIOIN;
 "#NUIOOU"                       return NUIOOU;
+"#NUGAIN"                       return NUGAIN;
 
 "float"  {fgen = 1; type_tmp = 2; yylval = 2; return TYPE;}
 "int"              {type_tmp = 1; yylval = 1; return TYPE;}
@@ -81,6 +82,7 @@ LETRA  [A-Za-z_]
 "!="                          return     DIF;
 "&&"                          return    LAND;
 "||"                          return     LOR;
+"/>"                          return    NORM;
 
 \n                            line_num++;
 

@@ -671,7 +671,7 @@
 	<stdlib.h>
 	<stdio.h>
 
-1583888088 source:c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\labels.c
+1586477307 source:c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\labels.c
 	"labels.h"
 	<stdio.h>
 	<stdlib.h>
@@ -703,7 +703,7 @@
 	<stdlib.h>
 	<math.h>
 
-1583888088 source:c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\variaveis.c
+1587685488 source:c:\users\luccaviccini\desktop\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\variaveis.c
 	"variaveis.h"
 	<stdio.h>
 	<string.h>
@@ -723,4 +723,52 @@
 	<stdlib.h>
 	<stdlib.h>
 	<stdio.h>
+
+1586477307 source:e:\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1583888088 e:\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\labels.h
+
+1583888088 source:e:\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\t2t.c
+	"t2t.h"
+	<string.h>
+	<stdlib.h>
+	<math.h>
+
+1583888088 e:\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\t2t.h
+	<stdio.h>
+
+1587685488 source:e:\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1583888088 e:\ufjf\ic\vic_cern\nipscernufjf\sapho\compilador c\variaveis.h
+
+1588781237 source:c:\users\luccaviccini\desktop\sapho-sapho_lucca\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1588781237 c:\users\luccaviccini\desktop\sapho-sapho_lucca\compilador c\labels.h
+
+1588781237 source:c:\users\luccaviccini\desktop\sapho-sapho_lucca\compilador c\t2t.c
+	"t2t.h"
+	<string.h>
+	<stdlib.h>
+	<math.h>
+
+1588781237 c:\users\luccaviccini\desktop\sapho-sapho_lucca\compilador c\t2t.h
+	<stdio.h>
+
+1588781237 source:c:\users\luccaviccini\desktop\sapho-sapho_lucca\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1588781237 c:\users\luccaviccini\desktop\sapho-sapho_lucca\compilador c\variaveis.h
 

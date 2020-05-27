@@ -28,6 +28,7 @@ LINHA          \n
 "#NUIOOU" eval_direct(12);
 "#DATYPE" eval_direct(13);
 "#DIRNAM" eval_direct(14);
+"#NUGAIN" eval_direct(15);
 
 "LOAD"    eval_opcode( 0,1);
 "PLD"     eval_opcode( 1,1);
@@ -78,6 +79,7 @@ LINHA          \n
 "SSRS"   {eval_opcode(49,0); add_mne("SRS");}
 "PSET"   eval_opcode(50,1);
 "PSETP"  eval_opcode(51,1);
+"NORM"   {eval_opcode(52,0); add_mne("NRM");}
 
 {CONST}   eval_opernd(yytext,1);
 {STRIN}   eval_opernd(yytext+1,0);
