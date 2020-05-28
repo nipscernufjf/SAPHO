@@ -39,6 +39,8 @@ namespace Sapho_IDE
             Sapho_IDE.Properties.Settings.Default.n_io_in = tb_nioin.Text;
             Sapho_IDE.Properties.Settings.Default.n_io_out = tb_nioout.Text;
 
+            Sapho_IDE.Properties.Settings.Default.Gain = tb_gain.Text;
+
             string direct = Sapho_IDE.Properties.Settings.Default.ProjectDirect;
             string pName = Sapho_IDE.Properties.Settings.Default.procName;
 

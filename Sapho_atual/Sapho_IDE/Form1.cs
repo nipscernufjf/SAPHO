@@ -73,7 +73,7 @@ namespace Sapho_IDE
             e.ChangedRange.SetStyle(BrownStyle, @"""""|@""""|''|@"".*?""|(?<!@)(?<range>"".*?[^\\]"")|'.*?[^\\]'");
 
             //define highlighting
-            e.ChangedRange.SetStyle(GreenStyleD, @"#define|#PRNAME|#DIRNAM|#DATYPE|#NUBITS|#NBMANT|#NBEXPO|#NDSTAC|#SDEPTH|#NUIOIN|#NUIOOU", RegexOptions.Multiline);
+            e.ChangedRange.SetStyle(GreenStyleD, @"#define|#PRNAME|#DIRNAM|#DATYPE|#NUBITS|#NBMANT|#NBEXPO|#NDSTAC|#SDEPTH|#NUIOIN|#NUIOOU|#NUGAIN", RegexOptions.Multiline);
 
             // Assembly Highlighting
             e.ChangedRange.SetStyle(AssmblyStyleD, @"LOAD|PLD|SET|SETP|PUSH|JZ|JMP|CALL|RETURN|SRF|IN|OUT|NEG|ADD|SADD|MLT|SMLT|DIV|SDIV|MOD|SMOD|AND|SAND|LAND|SLAND|OR|SOR|LOR|SLOR|XOR|SXOR|XORB|SXORB|INV|LINV|EQU|SEQU|NOP|GRE|SGRE|LES|SLES|SHR|SSHR|SHL|SSHL|SRS|SSRS|", RegexOptions.Multiline);
@@ -236,6 +236,8 @@ namespace Sapho_IDE
 
             fctb.InsertText("#NUIOIN " + Properties.Settings.Default.n_io_in + "\n");
             fctb.InsertText("#NUIOOU " + Properties.Settings.Default.n_io_out + "\n");
+
+            fctb.InsertText("#NUGAIN " + Convert.ToString(Math.Pow(2,Convert.ToInt32( Properties.Settings.Default.Gain))) + "\n");
 
             fctb.InsertText("\nvoid main() \n{\n\n}");
         }
@@ -740,6 +742,11 @@ namespace Sapho_IDE
         }
 
         private void TabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Hierarchy_AfterSelect(object sender, TreeViewEventArgs e)
         {
 
         }
