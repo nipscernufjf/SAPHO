@@ -53,10 +53,14 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tb_procname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.tb_gain = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -71,9 +75,11 @@
             this.groupBox2.Controls.Add(this.rb_fix);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(12, 81);
+            this.groupBox2.Location = new System.Drawing.Point(16, 100);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(434, 100);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(579, 123);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ULA Settings:";
@@ -81,34 +87,38 @@
             // tb_nbitsexp
             // 
             this.tb_nbitsexp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_nbitsexp.Location = new System.Drawing.Point(362, 58);
+            this.tb_nbitsexp.Location = new System.Drawing.Point(483, 71);
+            this.tb_nbitsexp.Margin = new System.Windows.Forms.Padding(4);
             this.tb_nbitsexp.Name = "tb_nbitsexp";
-            this.tb_nbitsexp.Size = new System.Drawing.Size(44, 20);
+            this.tb_nbitsexp.Size = new System.Drawing.Size(57, 23);
             this.tb_nbitsexp.TabIndex = 6;
             // 
             // tb_nbitsmant
             // 
             this.tb_nbitsmant.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_nbitsmant.Location = new System.Drawing.Point(215, 58);
+            this.tb_nbitsmant.Location = new System.Drawing.Point(287, 71);
+            this.tb_nbitsmant.Margin = new System.Windows.Forms.Padding(4);
             this.tb_nbitsmant.Name = "tb_nbitsmant";
-            this.tb_nbitsmant.Size = new System.Drawing.Size(44, 20);
+            this.tb_nbitsmant.Size = new System.Drawing.Size(57, 23);
             this.tb_nbitsmant.TabIndex = 5;
             // 
             // tb_nubits
             // 
             this.tb_nubits.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_nubits.Location = new System.Drawing.Point(58, 58);
+            this.tb_nubits.Location = new System.Drawing.Point(77, 71);
+            this.tb_nubits.Margin = new System.Windows.Forms.Padding(4);
             this.tb_nubits.Name = "tb_nubits";
-            this.tb_nubits.Size = new System.Drawing.Size(44, 20);
+            this.tb_nubits.Size = new System.Drawing.Size(57, 23);
             this.tb_nubits.TabIndex = 4;
             // 
             // lb_nbitexp
             // 
             this.lb_nbitexp.AutoSize = true;
             this.lb_nbitexp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_nbitexp.Location = new System.Drawing.Point(268, 61);
+            this.lb_nbitexp.Location = new System.Drawing.Point(357, 75);
+            this.lb_nbitexp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_nbitexp.Name = "lb_nbitexp";
-            this.lb_nbitexp.Size = new System.Drawing.Size(88, 16);
+            this.lb_nbitexp.Size = new System.Drawing.Size(109, 20);
             this.lb_nbitexp.TabIndex = 15;
             this.lb_nbitexp.Text = "Nb Exponent:";
             // 
@@ -116,9 +126,10 @@
             // 
             this.lb_nbitmant.AutoSize = true;
             this.lb_nbitmant.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_nbitmant.Location = new System.Drawing.Point(123, 61);
+            this.lb_nbitmant.Location = new System.Drawing.Point(164, 75);
+            this.lb_nbitmant.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_nbitmant.Name = "lb_nbitmant";
-            this.lb_nbitmant.Size = new System.Drawing.Size(86, 16);
+            this.lb_nbitmant.Size = new System.Drawing.Size(108, 20);
             this.lb_nbitmant.TabIndex = 13;
             this.lb_nbitmant.Text = "Nb Mantissa:";
             // 
@@ -126,9 +137,10 @@
             // 
             this.lb_nbitfix.AutoSize = true;
             this.lb_nbitfix.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_nbitfix.Location = new System.Drawing.Point(6, 61);
+            this.lb_nbitfix.Location = new System.Drawing.Point(8, 75);
+            this.lb_nbitfix.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_nbitfix.Name = "lb_nbitfix";
-            this.lb_nbitfix.Size = new System.Drawing.Size(45, 16);
+            this.lb_nbitfix.Size = new System.Drawing.Size(58, 20);
             this.lb_nbitfix.TabIndex = 11;
             this.lb_nbitfix.Text = "N bits:";
             this.lb_nbitfix.Click += new System.EventHandler(this.lb_nbitfix_Click);
@@ -137,9 +149,10 @@
             // 
             this.rb_float.AutoSize = true;
             this.rb_float.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_float.Location = new System.Drawing.Point(249, 26);
+            this.rb_float.Location = new System.Drawing.Point(332, 32);
+            this.rb_float.Margin = new System.Windows.Forms.Padding(4);
             this.rb_float.Name = "rb_float";
-            this.rb_float.Size = new System.Drawing.Size(107, 20);
+            this.rb_float.Size = new System.Drawing.Size(132, 24);
             this.rb_float.TabIndex = 3;
             this.rb_float.TabStop = true;
             this.rb_float.Text = "Floating Point";
@@ -150,9 +163,10 @@
             // 
             this.rb_fix.AutoSize = true;
             this.rb_fix.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_fix.Location = new System.Drawing.Point(131, 26);
+            this.rb_fix.Location = new System.Drawing.Point(175, 32);
+            this.rb_fix.Margin = new System.Windows.Forms.Padding(4);
             this.rb_fix.Name = "rb_fix";
-            this.rb_fix.Size = new System.Drawing.Size(92, 20);
+            this.rb_fix.Size = new System.Drawing.Size(113, 24);
             this.rb_fix.TabIndex = 2;
             this.rb_fix.TabStop = true;
             this.rb_fix.Text = "Fixed Point";
@@ -163,9 +177,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 28);
+            this.label3.Location = new System.Drawing.Point(8, 34);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 16);
+            this.label3.Size = new System.Drawing.Size(132, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Processor Type:";
             // 
@@ -176,9 +191,11 @@
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(12, 257);
+            this.groupBox4.Location = new System.Drawing.Point(16, 316);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(435, 64);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Size = new System.Drawing.Size(580, 79);
             this.groupBox4.TabIndex = 15;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "I/O Settings:";
@@ -186,26 +203,29 @@
             // tb_nioout
             // 
             this.tb_nioout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_nioout.Location = new System.Drawing.Point(362, 27);
+            this.tb_nioout.Location = new System.Drawing.Point(483, 33);
+            this.tb_nioout.Margin = new System.Windows.Forms.Padding(4);
             this.tb_nioout.Name = "tb_nioout";
-            this.tb_nioout.Size = new System.Drawing.Size(44, 20);
+            this.tb_nioout.Size = new System.Drawing.Size(57, 23);
             this.tb_nioout.TabIndex = 10;
             // 
             // tb_nioin
             // 
             this.tb_nioin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_nioin.Location = new System.Drawing.Point(149, 27);
+            this.tb_nioin.Location = new System.Drawing.Point(199, 33);
+            this.tb_nioin.Margin = new System.Windows.Forms.Padding(4);
             this.tb_nioin.Name = "tb_nioin";
-            this.tb_nioin.Size = new System.Drawing.Size(44, 20);
+            this.tb_nioin.Size = new System.Drawing.Size(57, 23);
             this.tb_nioin.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(212, 30);
+            this.label5.Location = new System.Drawing.Point(283, 37);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(148, 16);
+            this.label5.Size = new System.Drawing.Size(192, 20);
             this.label5.TabIndex = 13;
             this.label5.Text = "Number of Output Ports:";
             // 
@@ -213,18 +233,20 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(9, 30);
+            this.label7.Location = new System.Drawing.Point(12, 37);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(138, 16);
+            this.label7.Size = new System.Drawing.Size(178, 20);
             this.label7.TabIndex = 11;
             this.label7.Text = "Number of Input Ports:";
             // 
             // bt_generate
             // 
             this.bt_generate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_generate.Location = new System.Drawing.Point(161, 332);
+            this.bt_generate.Location = new System.Drawing.Point(215, 490);
+            this.bt_generate.Margin = new System.Windows.Forms.Padding(4);
             this.bt_generate.Name = "bt_generate";
-            this.bt_generate.Size = new System.Drawing.Size(136, 23);
+            this.bt_generate.Size = new System.Drawing.Size(181, 28);
             this.bt_generate.TabIndex = 11;
             this.bt_generate.Text = "Generate";
             this.bt_generate.UseVisualStyleBackColor = true;
@@ -237,9 +259,11 @@
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(12, 187);
+            this.groupBox3.Location = new System.Drawing.Point(16, 230);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(434, 64);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Size = new System.Drawing.Size(579, 79);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Memory Stack Settings:";
@@ -247,26 +271,29 @@
             // tb_instrstack
             // 
             this.tb_instrstack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_instrstack.Location = new System.Drawing.Point(336, 27);
+            this.tb_instrstack.Location = new System.Drawing.Point(448, 33);
+            this.tb_instrstack.Margin = new System.Windows.Forms.Padding(4);
             this.tb_instrstack.Name = "tb_instrstack";
-            this.tb_instrstack.Size = new System.Drawing.Size(44, 20);
+            this.tb_instrstack.Size = new System.Drawing.Size(57, 23);
             this.tb_instrstack.TabIndex = 8;
             // 
             // tb_datastack
             // 
             this.tb_datastack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_datastack.Location = new System.Drawing.Point(121, 27);
+            this.tb_datastack.Location = new System.Drawing.Point(161, 33);
+            this.tb_datastack.Margin = new System.Windows.Forms.Padding(4);
             this.tb_datastack.Name = "tb_datastack";
-            this.tb_datastack.Size = new System.Drawing.Size(44, 20);
+            this.tb_datastack.Size = new System.Drawing.Size(57, 23);
             this.tb_datastack.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(194, 30);
+            this.label4.Location = new System.Drawing.Point(259, 37);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 16);
+            this.label4.Size = new System.Drawing.Size(177, 20);
             this.label4.TabIndex = 13;
             this.label4.Text = "Instruction Stack Size:";
             // 
@@ -274,9 +301,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(9, 30);
+            this.label6.Location = new System.Drawing.Point(12, 37);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 16);
+            this.label6.Size = new System.Drawing.Size(135, 20);
             this.label6.TabIndex = 11;
             this.label6.Text = "Data Stack Size:";
             // 
@@ -285,9 +313,11 @@
             this.groupBox1.Controls.Add(this.tb_procname);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(13, 13);
+            this.groupBox1.Location = new System.Drawing.Point(17, 16);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(433, 64);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(577, 79);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "General Settings:";
@@ -295,32 +325,68 @@
             // tb_procname
             // 
             this.tb_procname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_procname.Location = new System.Drawing.Point(130, 28);
+            this.tb_procname.Location = new System.Drawing.Point(173, 34);
+            this.tb_procname.Margin = new System.Windows.Forms.Padding(4);
             this.tb_procname.Name = "tb_procname";
-            this.tb_procname.Size = new System.Drawing.Size(297, 20);
+            this.tb_procname.Size = new System.Drawing.Size(395, 23);
             this.tb_procname.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 31);
+            this.label1.Location = new System.Drawing.Point(15, 38);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 16);
+            this.label1.Size = new System.Drawing.Size(140, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Processor Name:";
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.tb_gain);
+            this.groupBox5.Controls.Add(this.label8);
+            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Location = new System.Drawing.Point(17, 403);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox5.Size = new System.Drawing.Size(580, 79);
+            this.groupBox5.TabIndex = 19;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Gain";
+            // 
+            // tb_gain
+            // 
+            this.tb_gain.Location = new System.Drawing.Point(76, 34);
+            this.tb_gain.Name = "tb_gain";
+            this.tb_gain.Size = new System.Drawing.Size(57, 26);
+            this.tb_gain.TabIndex = 14;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(12, 37);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(49, 20);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Gain:";
+            // 
             // Form_AddProc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 366);
+            this.ClientSize = new System.Drawing.Size(611, 531);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.bt_generate);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_AddProc";
             this.Text = "Configuration Wizzard";
             this.Load += new System.EventHandler(this.Form_AddProc_Load);
@@ -332,6 +398,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -361,5 +429,8 @@
         private System.Windows.Forms.TextBox tb_nioin;
         private System.Windows.Forms.TextBox tb_instrstack;
         private System.Windows.Forms.TextBox tb_datastack;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox tb_gain;
+        private System.Windows.Forms.Label label8;
     }
 }

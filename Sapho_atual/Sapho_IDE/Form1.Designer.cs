@@ -102,7 +102,6 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(1383, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -461,6 +460,7 @@
             this.hierarchy.Name = "hierarchy";
             this.hierarchy.Size = new System.Drawing.Size(292, 559);
             this.hierarchy.TabIndex = 1;
+            this.hierarchy.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.Hierarchy_AfterSelect);
             this.hierarchy.DoubleClick += new System.EventHandler(this.hierarchy_DoubleClick);
             // 
             // splitContainer2
