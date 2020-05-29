@@ -772,3 +772,27 @@
 
 1588781237 c:\users\luccaviccini\desktop\sapho-sapho_lucca\compilador c\variaveis.h
 
+1590337943 source:c:\users\luccaviccini\desktop\ufjf\ic\ic_luciano\nipscernufjf\sapho\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1590337943 c:\users\luccaviccini\desktop\ufjf\ic\ic_luciano\nipscernufjf\sapho\compilador c\labels.h
+
+1590337943 source:c:\users\luccaviccini\desktop\ufjf\ic\ic_luciano\nipscernufjf\sapho\compilador c\t2t.c
+	"t2t.h"
+	<string.h>
+	<stdlib.h>
+	<math.h>
+
+1590337943 c:\users\luccaviccini\desktop\ufjf\ic\ic_luciano\nipscernufjf\sapho\compilador c\t2t.h
+	<stdio.h>
+
+1590337944 source:c:\users\luccaviccini\desktop\ufjf\ic\ic_luciano\nipscernufjf\sapho\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1590764319 c:\users\luccaviccini\desktop\ufjf\ic\ic_luciano\nipscernufjf\sapho\compilador c\variaveis.h
+

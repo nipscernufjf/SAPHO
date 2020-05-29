@@ -1,7 +1,7 @@
 #ifndef VARIAVEIS_H_INCLUDED
 #define VARIAVEIS_H_INCLUDED
 
-#define NVARMAX 9999
+#define NVARMAX 999999
 
 char  fname[512];
 char v_name[NVARMAX][512]; // nome da variavel ou funcao

@@ -7,7 +7,7 @@
 #include "labels.h"
 #include "t2t.h"
 
-#define OFST 10000
+#define OFST 1000000
 
 FILE *f_asm, *yyin;
 
