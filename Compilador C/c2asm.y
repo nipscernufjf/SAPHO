@@ -181,7 +181,10 @@ assignment: ID '=' exp ';'                 {var_set($1,$3,0,0);}
 
 // expressoes -----------------------------------------------------------------
 
-exp:       INUM                            {                    $$ = load($1,1,1         ,0);}
+const:   INUM                         {                    $$ = load($1,1,1         ,0);}
+        | '-' const                        {$$ = neg($2);}
+
+exp:       const
          | FNUM                            {                    $$ = load($1,1,2         ,0);}
          | ID                              {                    $$ = load($1,0,v_type[$1],0);}
          | ID '[' exp ']'                  {array_check($1,$3); $$ = load($1,0,v_type[$1],1);}
@@ -189,7 +192,7 @@ exp:       INUM                            {                    $$ = load($1,1,1
          | func_call                       {$$ =     $1*OFST;}
          | '(' exp ')'                     {$$ =         $2 ;}
          | '+' exp                         {$$ =         $2 ;}
-         | '-' exp                         {$$ = neg($2);}
+         | '-' exp                         {$$ = negacao($2);}
          | '!' exp                         {$$ = int_oper ($2, 0, "!"  , "LINV", 1);}
          | '~' exp                         {$$ = int_oper ($2, 0, "~"  ,  "INV", 0);}
          | exp '%' exp                     {$$ = int_oper ($1,$3, "%"  ,  "MOD", 0);}
