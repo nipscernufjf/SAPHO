@@ -29,7 +29,7 @@ void  func_ret  (int id);
 void  var_set   (int id, int et, int is_array, int is_pos);
 int   negacao   (int et);
 int operacoes   (int et1, int et2, char *iop, char *fop, int *op);
-void declar_var (int id1, int id2);
+void declar_var (int id1, int id2, int id3);
 int  declar_par (int   t, int id );
 void declar_fun (int id1, int id2);
 void declar_ret (int et);
@@ -94,12 +94,13 @@ direct:   PRNAME  ID                       {fprintf(f_asm, "#PRNAME %s\n", v_nam
 // Declaracao de variaveis ----------------------------------------------------
 
 declar:   TYPE id_list ';'
+        | TYPE ID '[' INUM ']' STRING ';'  {declar_var($2,$4,$6); v_asgn[$2] = 1;};
 
 id_list:  IID
         | id_list ',' IID
 
-IID:      ID                               {declar_var($1,-1);}
-        | ID '[' INUM ']'                  {declar_var($1,$3); v_asgn[$1] = 1;};
+IID:      ID                               {declar_var($1,-1,-1);}
+        | ID '[' INUM ']'                  {declar_var($1,$3,-1); v_asgn[$1] = 1;};
 
 // Declaracao de funcoes ------------------------------------------------------
 
@@ -169,8 +170,8 @@ while_exp: WHILE                           {acc_id = -1; fprintf(f_asm, "@L%d ",
 // declaracoes de variaveis ---------------------------------------------------
 
 declar_full: declar
-           | TYPE ID '=' exp ';'           {declar_var($2,-1); var_set($2,$4,0,0);};
-           | TYPE ID '@' exp ';'           {declar_var($2,-1); var_set($2,$4,0,1);};
+           | TYPE ID '=' exp ';'           {declar_var($2,-1,-1); var_set($2,$4,0,0);};
+           | TYPE ID '@' exp ';'           {declar_var($2,-1,-1); var_set($2,$4,0,1);};
 
 // assignments ----------------------------------------------------------------
 
@@ -220,10 +221,10 @@ exp:       const
 
 int main(int argc, char *argv[])
 {
-    yyin   = fopen(argv[1], "r");
+  yyin   = fopen(argv[1], "r");
 	f_asm  = fopen(argv[2], "w");
 
-    float_init();
+  float_init();
     //fprintf(f_asm, "LOAD 0\n");
 	yyparse();
 	fclose(yyin );
@@ -612,7 +613,7 @@ int operacoes(int et1, int et2, char *iop, char *fop, int *op)
     return ((et1 >= 2*OFST) || (et2 >= 2*OFST)) ? 2*OFST : OFST;
 }
 
-void declar_var (int id1, int id2)
+void declar_var (int id1, int id2, int id3) // id3 -> indice para pegar string, declaracao de array.
 {
     if (v_type[id1] != 0) // variavel ja existe
     {
@@ -626,16 +627,19 @@ void declar_var (int id1, int id2)
     v_asgn[id1] = 0;
     v_fnid[id1] = find_var(fname);
 
-    if (id2 != -1)
+    if (id2 != -1) // significa que eh array
     {
-        fprintf(f_asm, "#array %s %s\n", v_name[id1], v_name[id2]);
-        v_isar[id1] = 1;
+        if(id3 == -1)
+          fprintf(f_asm, "#array %s %s\n", v_name[id1], v_name[id2]);
+        else
+          fprintf(f_asm, "#arrays %s %s %s\n", v_name[id1], v_name[id2], v_name[id3]);
+          v_isar[id1] = 1;
     }
 }
 
 int declar_par(int t, int id)
 {
-    declar_var(id,-1);
+    declar_var(id,-1,-1);
     v_asgn[id] = 1;
     v_fpar[fun_id1] = v_fpar[fun_id1]*10 + t;
 
