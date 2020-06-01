@@ -796,3 +796,32 @@
 
 1590769850 c:\users\luccaviccini\desktop\ufjf\ic\ic_luciano\nipscernufjf\sapho\compilador c\variaveis.h
 
+1590935180 source:c:\users\luccaviccini\desktop\ufjf\ic\ic_luciano\nipscernufjf\sapho\compilador c\lex.yy.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<io.h>
+	<stdlib.h>
+	<string.h>
+	"y.tab.h"
+	"variaveis.h"
+	"t2t.h"
+	<stdlib.h>
+
+1590935180 c:\users\luccaviccini\desktop\ufjf\ic\ic_luciano\nipscernufjf\sapho\compilador c\y.tab.h
+
+1590935180 source:c:\users\luccaviccini\desktop\ufjf\ic\ic_luciano\nipscernufjf\sapho\compilador c\y.tab.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"variaveis.h"
+	"labels.h"
+	"t2t.h"
+	<stddef.h>
+	<libintl.h>
+	<alloca.h>
+	<malloc.h>
+	<stdlib.h>
+	<stdlib.h>
+	<stdio.h>
+

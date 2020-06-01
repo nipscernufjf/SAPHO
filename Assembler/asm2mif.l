@@ -18,6 +18,8 @@ LINHA          \n
 %%
 
 "#array"  eval_direct( 3);
+"#arrays" eval_direct(16);
+
 "#PRNAME" eval_direct( 5);
 "#NUBITS" eval_direct( 6);
 "#NBMANT" eval_direct( 7);

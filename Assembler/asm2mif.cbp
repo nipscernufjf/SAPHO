@@ -20,6 +20,7 @@
 				</Linker>
 				<ExtraCommands>
 					<Add before="flex -oasm2mif.c asm2mif.l" />
+					<Add after=".\bin\Release\asm2mif.exe teste.asm" />
 					<Mode after="always" />
 				</ExtraCommands>
 			</Target>

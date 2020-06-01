@@ -1547,7 +1547,7 @@
 	"eval.h"
 	"mnemonicos.h"
 
-1590337943 source:c:\users\luccaviccini\desktop\ufjf\ic\ic_luciano\nipscernufjf\sapho\assembler\eval.c
+1590956964 source:c:\users\luccaviccini\desktop\ufjf\ic\ic_luciano\nipscernufjf\sapho\assembler\eval.c
 	"eval.h"
 	"t2t.h"
 	"variaveis.h"
@@ -1566,7 +1566,7 @@
 
 1590337943 c:\users\luccaviccini\desktop\ufjf\ic\ic_luciano\nipscernufjf\sapho\assembler\labels.h
 
-1590337943 c:\users\luccaviccini\desktop\ufjf\ic\ic_luciano\nipscernufjf\sapho\assembler\veri_comp.h
+1590769850 c:\users\luccaviccini\desktop\ufjf\ic\ic_luciano\nipscernufjf\sapho\assembler\veri_comp.h
 
 1590337943 source:c:\users\luccaviccini\desktop\ufjf\ic\ic_luciano\nipscernufjf\sapho\assembler\labels.c
 	"labels.h"
@@ -1595,7 +1595,7 @@
 	<string.h>
 	<stdlib.h>
 
-1590337943 source:c:\users\luccaviccini\desktop\ufjf\ic\ic_luciano\nipscernufjf\sapho\assembler\veri_comp.c
+1590769850 source:c:\users\luccaviccini\desktop\ufjf\ic\ic_luciano\nipscernufjf\sapho\assembler\veri_comp.c
 	"veri_comp.h"
 	<string.h>
 	<stdio.h>

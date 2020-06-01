@@ -16,6 +16,7 @@ int  state = 0;     // estado do compilador
 int  c_op;          // guarda opcode atual
 int  pp;            // flag do pre-processador
 int  nbopr;         // num de bits de operando
+int tam_var;        //  tamanho do array
 
 void eval_init(int prep)
 {
@@ -69,11 +70,20 @@ void operando(char *va, int is_const)
     add_instr(c_op, find_var(va));
 }
 
-void array_size(char *va)
+void array_size(int va, char *f_name)
 {
-    int i, inc = atoi(va);
-    inc_vcont(inc-1);
-    for (i = 0; i < inc; i++) add_data(0);
+    if (strcmp(f_name, "") == 0)
+    {
+
+        int i, inc = va;
+        inc_vcont(inc-1);
+        for (i = 0; i < inc; i++) add_data(0);
+        fprintf(stderr, " Passei dentro do if");
+    }
+
+    else
+        fprintf(stderr, " Nome do arquivo: %s\n", f_name);
+
 }
 
 void eval_direct(int next_state)
@@ -98,7 +108,7 @@ void eval_opernd(char *va, int is_const)
                  state = 0; break;
         case  3: add_var(va,0);                                  // declarando array
                  state = 4; break;
-        case  4: array_size(va);                                 // tamanho do array
+        case  4: array_size(atoi(va), "");                                 // tamanho do array
                  state = 0; break;
         case  5: if (pp) set_name(va);                           // nome do processador
                  state = 0; break;
@@ -126,6 +136,13 @@ void eval_opernd(char *va, int is_const)
                  state = 0; break;
         case 15: if (pp) set_nugain(atoi(va));
                  state = 0; break;
+
+        case  16: add_var(va,0);                                  // declarando array
+                 state = 17; break;
+        case  17: tam_var = atoi(va);
+                 state = 18; break;
+        case  18: array_size(tam_var,va);
+                  state =0; break;
     }
 }
 
