@@ -16,7 +16,7 @@ int  state = 0;     // estado do compilador
 int  c_op;          // guarda opcode atual
 int  pp;            // flag do pre-processador
 int  nbopr;         // num de bits de operando
-int tam_var;        //  tamanho do array
+int tam_var;
 
 void eval_init(int prep)
 {
@@ -70,20 +70,65 @@ void operando(char *va, int is_const)
     add_instr(c_op, find_var(va));
 }
 
+void get_addr(char *f_name, int tam)
+{
+    FILE* filepointer;
+    if(pp == 0)
+    {
+        int tamanho = strlen(f_name); // tamanho da string
+        int idxToDel = tamanho -1; // indice para deletar, nesse caso o ultimo, as aspas.
+        memmove(&f_name[idxToDel], &f_name[idxToDel +1], 1); // deletando de fato o indice
+        strcat(addr_tab, d_name);
+        strcat(addr_tab, f_name);
+        filepointer = fopen(addr_tab, "r");
+
+        if (filepointer == NULL)
+            printf("Nao rolou de abrir/achar o arquivo!!\n");
+    }
+
+        //coisas para ler o arquivo
+
+    int i;
+    char linha[32];
+
+    for (i = 0;i < tam ; i++)
+    {
+        if(pp == 0)
+        {
+            fgets(linha, sizeof(linha), filepointer);
+            int val = atoi(linha);
+            fprintf(stderr, "Val: %d;\n", val);
+            add_data(val);
+        }
+
+        else
+           add_data(0);
+    }
+
+
+    if(pp == 0)
+        fclose(filepointer);
+
+    return;
+}
+
+
+
 void array_size(int va, char *f_name)
 {
+    int i, inc = va;
     if (strcmp(f_name, "") == 0)
     {
-
-        int i, inc = va;
         inc_vcont(inc-1);
         for (i = 0; i < inc; i++) add_data(0);
         fprintf(stderr, " Passei dentro do if");
     }
 
     else
-        fprintf(stderr, " Nome do arquivo: %s\n", f_name);
+    {   get_addr(f_name, inc);
 
+        fprintf(stderr, " Nome do arquivo: %s\n", addr_tab);
+    }
 }
 
 void eval_direct(int next_state)
@@ -136,14 +181,15 @@ void eval_opernd(char *va, int is_const)
                  state = 0; break;
         case 15: if (pp) set_nugain(atoi(va));
                  state = 0; break;
-
         case  16: add_var(va,0);                                  // declarando array
                  state = 17; break;
-        case  17: tam_var = atoi(va);
+        case  17:fprintf(stderr, "va: %s", va);
+                 tam_var = atoi(va);
                  state = 18; break;
         case  18: array_size(tam_var,va);
                   state =0; break;
     }
+
 }
 
 void eval_label(char *la)
@@ -160,3 +206,4 @@ void eval_finish()
     fclose(f_data);
     build_vfile();
 }
+
