@@ -72,7 +72,7 @@ void operando(char *va, int is_const)
 
 void get_addr(char *f_name, int tam)
 {
-    FILE* filepointer;
+    //FILE* filepointer;
     if(pp == 0)
     {
         int tamanho = strlen(f_name); // tamanho da string
@@ -80,13 +80,18 @@ void get_addr(char *f_name, int tam)
         memmove(&f_name[idxToDel], &f_name[idxToDel +1], 1); // deletando de fato o indice
         strcat(addr_tab, d_name);
         strcat(addr_tab, f_name);
-        filepointer = fopen(addr_tab, "r");
+        //filepointer = fopen(addr_tab, "r");
 
-        if (filepointer == NULL)
-            printf("Nao rolou de abrir/achar o arquivo!!\n");
+        //if (filepointer == NULL)
+            //printf("Nao rolou de abrir/achar o arquivo!!\n");
     }
 
         //coisas para ler o arquivo
+
+    FILE* filepointer = fopen(addr_tab, "r");
+    if (pp == 0 && filepointer == NULL)
+        printf("Nao rolou de abrir/achar o arquivo!!\n");
+
 
     int i;
     char linha[32];
@@ -97,7 +102,7 @@ void get_addr(char *f_name, int tam)
         {
             fgets(linha, sizeof(linha), filepointer);
             int val = atoi(linha);
-            fprintf(stderr, "Val: %d;\n", val);
+            //fprintf(stderr, "Val: %d;\n", val);
             add_data(val);
         }
 
@@ -121,13 +126,14 @@ void array_size(int va, char *f_name)
     {
         inc_vcont(inc-1);
         for (i = 0; i < inc; i++) add_data(0);
-        fprintf(stderr, " Passei dentro do if");
+       // fprintf(stderr, " Passei dentro do if");
     }
 
     else
-    {   get_addr(f_name, inc);
+    {
+        get_addr(f_name, inc);
 
-        fprintf(stderr, " Nome do arquivo: %s\n", addr_tab);
+        //fprintf(stderr, " Nome do arquivo: %s\n", addr_tab);
     }
 }
 
@@ -183,7 +189,7 @@ void eval_opernd(char *va, int is_const)
                  state = 0; break;
         case  16: add_var(va,0);                                  // declarando array
                  state = 17; break;
-        case  17:fprintf(stderr, "va: %s", va);
+        case  17://fprintf(stderr, "va: %s", va);
                  tam_var = atoi(va);
                  state = 18; break;
         case  18: array_size(tam_var,va);
