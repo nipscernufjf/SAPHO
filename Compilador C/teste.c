@@ -12,6 +12,6 @@
 void main() 
 {
     int a = 32;
-    a = /> a;
+    a /> a;
     out(0,a);
 }

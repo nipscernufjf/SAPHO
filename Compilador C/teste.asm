@@ -10,8 +10,7 @@
 @main LOAD 32
 SET maina
 LOAD maina
-NORM
-SET maina
+NORMS maina
 LOAD 0
 PLD maina
 OUT

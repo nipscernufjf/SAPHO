@@ -111,8 +111,8 @@ void get_addr(char *f_name, int tam)
     }
 
 
-    if(pp == 0)
-        fclose(filepointer);
+    //if(pp == 0)
+    fclose(filepointer);
 
     return;
 }

@@ -71,7 +71,7 @@ LETRA  [A-Za-z_]
                               return FNUM;
                            }
 
-[-+*()=;,\]\[{}<>~!%/&^|@]     return *yytext;
+[-+*()=;,\]\[{}<>~!%/&^|@?]     return *yytext;
 
 "<<"                          return  SHIFTL;
 ">>"                          return  SHIFTR;

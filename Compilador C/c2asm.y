@@ -26,8 +26,9 @@ int   load      (int id, int is_const, int dtype, int is_array);
 void  load_check(int et, int sinal);
 void  yyerror   (char  const *s);
 void  func_ret  (int id);
-void  var_set   (int id, int et, int is_array, int is_pos);
+void  var_set   (int id, int et, int is_array, int set_type);
 int   negacao   (int et);
+int   neg         (int et);
 int operacoes   (int et1, int et2, char *iop, char *fop, int *op);
 void declar_var (int id1, int id2, int id3);
 int  declar_par (int   t, int id );
@@ -55,6 +56,7 @@ void exec_out2  (int et);
 %token GREQU LESEQ EQU DIF LAND LOR
 %token NORM
 
+
 %right ','
 
 %left LOR
@@ -69,6 +71,7 @@ void exec_out2  (int et);
 %left '*' '/' '%'
 %left '!' '~'
 %left NORM
+
 
 %%
 
@@ -172,13 +175,19 @@ while_exp: WHILE                           {acc_id = -1; fprintf(f_asm, "@L%d ",
 declar_full: declar
            | TYPE ID '=' exp ';'           {declar_var($2,-1,-1); var_set($2,$4,0,0);};
            | TYPE ID '@' exp ';'           {declar_var($2,-1,-1); var_set($2,$4,0,1);};
+          // | TYPE ID "/>" exp ';'          {declar_var($2,-1,-1); var_set($2,$4,0,2);};
+
+
 
 // assignments ----------------------------------------------------------------
 
 assignment: ID '=' exp ';'                 {var_set($1,$3,0,0);}
           | ID '@' exp ';'                 {var_set($1,$3,0,1);}
+          | ID NORM exp ';'                 {var_set($1,$3,0,2);}
           | ID '[' exp ']' '='             {array_check($1,$3);}
             exp ';'                        {var_set($1,$7,1,0);};
+
+
 
 // expressoes -----------------------------------------------------------------
 
@@ -216,6 +225,8 @@ exp:       const
          | exp EQU exp                     {     operacoes($1,$3, "EQU", "CALL denorm\nLOAD float_aux3\nEQU float_aux1", &fgen); $$ = OFST;}
          | exp DIF exp                     {     operacoes($1,$3, "EQU", "CALL denorm\nLOAD float_aux3\nEQU float_aux1", &fgen); $$ = OFST; fprintf(f_asm, "LINV\n");}
          | NORM exp                        {$$ = int_oper ($2, 0, "/>"  , "NORM", 0);}
+
+
 
 %%
 
@@ -351,7 +362,7 @@ void func_ret(int id)
     strcpy(fname, "");
 }
 
-void var_set(int id, int et, int is_array, int is_pos)
+void var_set(int id, int et, int is_array, int set_type) // set_type =0 ->SET; set_type =1 -> PSET; set_type =2 ->NORMS
 {
     load_check(et,0);
 
@@ -397,8 +408,10 @@ void var_set(int id, int et, int is_array, int is_pos)
     char cset[10];
     if (is_array)
         strcpy(cset, "SRF\nSET");
-    else if (is_pos)
+    else if (set_type == 1)
             strcpy(cset, "PSET");
+    else if (set_type == 2)
+            strcpy(cset, "NORMS");
         else
         strcpy(cset, "SET");
 
