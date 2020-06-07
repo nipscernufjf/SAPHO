@@ -6,7 +6,7 @@ Scalable Architecture Processor for Hardware Optimization
 
 
 >> A pasta HDL contém os módulos do processador do Quartus (aqueles arquivos que o arquivo .qip "busca" ao criarmos um processador)
-- Falta editar o SAPHO para que o .qip busque o novo módulo (positivo.v), que é responsável pela nova instrução PSET e PSETP.
+
 
 
 >> A pasta HDL float possui arquivos .v que devem estar na pasta do executavel do SAPHO.
