@@ -89,6 +89,7 @@ wire [NUBITS-1:0] id_ula_data;
 wire [MDATAW-1:0] id_mem_addr;
 wire              id_srf;
 wire              id_neg;
+wire              id_nrm;
 
 instr_dec_fx #(NUBITS, NBOPCO, NBOPER, MDATAW) id(clk, rst,
                                                id_opcode, id_operand,
@@ -96,7 +97,7 @@ instr_dec_fx #(NUBITS, NBOPCO, NBOPER, MDATAW) id(clk, rst,
                                                id_ula_op, id_ula_data,
                                                mem_wr, id_mem_addr, mem_data_in,
                                                io_in, req_in, out_en,
-                                               id_srf, id_neg);
+                                               id_srf, id_neg, id_nrm);
 
 // Ponteiro pra pilha de dados ------------------------------------------------
 
@@ -138,7 +139,7 @@ ula_fx #(.NUBITS(NUBITS),
 ///////////////////////////////
 wire  [NUBITS-1:0] out;
 
-positivo_fx #(NUBITS) positivo_fx(ula_out, id_neg, out);
+positivo_fx #(NUBITS, NUGAIN) positivo_fx(ula_out, id_neg, id_nrm, out);
 /////////////////////////////////
 
 reg signed [NUBITS-1:0] racc;
