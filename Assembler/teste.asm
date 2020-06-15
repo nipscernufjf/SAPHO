@@ -1,17 +1,17 @@
-#PRNAME detetor_top
-#DIRNAM "C:"
+#PRNAME teste666
+#DIRNAM "C:\Users\LuccaViccini\Desktop\UFJF\IC\IC_Luciano\Rede_Neural\teste666\Hardware\teste666_H"
 #DATYPE 0
-#NUBITS 29
-#NDSTAC 16
-#SDEPTH 16
+#NUBITS 20
+#NDSTAC 12
+#SDEPTH 12
 #NUIOIN 2
 #NUIOOU 2
-#NUGAIN 2
-@main LOAD 32
-SET maina
-LOAD maina
-NORMS maina
+#NUGAIN 4
+@main #arrays mainlucca 10 "texto.txt"
+#arrays maintab 5 "texto2.txt"
+LOAD 6
+SET mainb
 LOAD 0
-PLD maina
+PLD mainb
 OUT
 @fim JMP fim

@@ -72,23 +72,23 @@ void operando(char *va, int is_const)
 
 void get_addr(char *f_name, int tam)
 {
-    //FILE* filepointer;
+
+    char addr_tab[512];
     if(pp == 0)
     {
         int tamanho = strlen(f_name); // tamanho da string
         int idxToDel = tamanho -1; // indice para deletar, nesse caso o ultimo, as aspas.
+        strcpy(addr_tab, "");
         memmove(&f_name[idxToDel], &f_name[idxToDel +1], 1); // deletando de fato o indice
         strcat(addr_tab, d_name);
         strcat(addr_tab, f_name);
-        //filepointer = fopen(addr_tab, "r");
 
-        //if (filepointer == NULL)
-            //printf("Nao rolou de abrir/achar o arquivo!!\n");
     }
 
         //coisas para ler o arquivo
 
     FILE* filepointer = fopen(addr_tab, "r");
+
     if (pp == 0 && filepointer == NULL)
         printf("Nao rolou de abrir/achar o arquivo!!\n");
 
@@ -102,7 +102,6 @@ void get_addr(char *f_name, int tam)
         {
             fgets(linha, sizeof(linha), filepointer);
             int val = atoi(linha);
-            //fprintf(stderr, "Val: %d;\n", val);
             add_data(val);
         }
 
@@ -110,8 +109,6 @@ void get_addr(char *f_name, int tam)
            add_data(0);
     }
 
-
-    //if(pp == 0)
     fclose(filepointer);
 
     return;
@@ -133,7 +130,7 @@ void array_size(int va, char *f_name)
     {
         get_addr(f_name, inc);
 
-        //fprintf(stderr, " Nome do arquivo: %s\n", addr_tab);
+
     }
 }
 

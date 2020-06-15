@@ -3,7 +3,6 @@
 
 int  n_ins;                         // numero de instrucoes adicionadas
 int  n_dat;
-char addr_tab[512];                      // numero de variaveis adicionadas
 
 void eval_init  (int prep);
 void eval_direct(int next_state);
