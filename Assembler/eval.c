@@ -119,9 +119,10 @@ void get_addr(char *f_name, int tam)
 void array_size(int va, char *f_name)
 {
     int i, inc = va;
+    inc_vcont(inc-1);
     if (strcmp(f_name, "") == 0)
     {
-        inc_vcont(inc-1);
+
         for (i = 0; i < inc; i++) add_data(0);
        // fprintf(stderr, " Passei dentro do if");
     }
