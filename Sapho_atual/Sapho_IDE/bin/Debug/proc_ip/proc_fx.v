@@ -33,6 +33,8 @@ module proc_fx
 	parameter SRS   =  0,
 	parameter NRM   =  0,
 	parameter ABS   =  0,
+	parameter NORMS =  0,
+	parameter PSET  =  0,
 	
 
 	// parametros configurados internamente ------------------------------------
@@ -96,7 +98,9 @@ core_fx #(.NUBITS(NUBITS),
           .SHL   (SHL)   ,
           .SRS   (SRS)   ,
 			 .NRM   (NRM)   ,
-			 .ABS   (ABS)  ) core(clk, rst,
+			 .ABS   (ABS)   ,
+			 .NORMS (NORMS) ,
+			 .PSET  (PSET)) core(clk, rst,
                                instr, instr_addr,
                                mem_wr, mem_addr_w, mem_addr_r, mem_data_in, mem_data_out,
                                io_in, addr_in, addr_out, req_in, out_en);
@@ -139,7 +143,9 @@ core_fx #(.NUBITS(NUBITS),
           .SHL   (SHL)   ,
           .SRS   (SRS)   ,
 			 .NRM   (NRM)   ,
-		    .ABS   (ABS)	 ) core(clk, rst,
+		    .ABS   (ABS)	 ,
+			 .NORMS (NORMS) ,
+			 .PSET  (PSET) ) core(clk, rst,
                                instr, instr_addr,
                                mem_wr, mem_addr_w, mem_addr_r, mem_data_in, mem_data_out,
                                io_in, addr_in, addr_out, req_in, out_en);

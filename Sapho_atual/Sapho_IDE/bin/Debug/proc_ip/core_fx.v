@@ -32,7 +32,10 @@ module core_fx
 	parameter SHL   =  0,
 	parameter SRS   =  0,
 	parameter NRM   =  0, 
-	parameter ABS   =  0
+	parameter ABS   =  0,
+	parameter NORMS =  0,
+	parameter PSET  =  0
+	
 )
 (
 	input                       clk, rst,
@@ -141,7 +144,7 @@ ula_fx #(.NUBITS(NUBITS),
 ///////////////////////////////
 wire  [NUBITS-1:0] out;
 
-positivo_fx #(NUBITS, NUGAIN) positivo_fx(ula_out, id_neg, id_nrm, out);
+positivo_fx #(NUBITS, NUGAIN, NORMS, PSET) positivo_fx(ula_out, id_neg, id_nrm, out);
 /////////////////////////////////
 
 reg signed [NUBITS-1:0] racc;

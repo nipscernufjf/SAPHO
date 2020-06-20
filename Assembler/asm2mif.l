@@ -79,11 +79,11 @@ LINHA          \n
 "SSHL"   {eval_opcode(47,0); add_mne("SHL");}
  "SRS"   {eval_opcode(48,1); add_mne("SRS");}
 "SSRS"   {eval_opcode(49,0); add_mne("SRS");}
-"PSET"   eval_opcode(50,1);
+"PSET"   {eval_opcode(50,1);add_mne("PSET");}
 "PSETP"  eval_opcode(51,1);
 "NORM"   {eval_opcode(52,0); add_mne("NRM");}
-"NORMS"  eval_opcode(53,1);
-"ABS"   {eval_opcode(54,0); add_mne("ABS");}
+"NORMS"  {eval_opcode(53,1);  add_mne("NORMS");}
+"ABS"    {eval_opcode(54,0); add_mne("ABS");}
 
 {CONST}   eval_opernd(yytext,1);
 {STRIN}   eval_opernd(yytext+1,0);

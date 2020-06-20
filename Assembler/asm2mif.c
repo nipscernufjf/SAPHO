@@ -1036,7 +1036,7 @@ YY_RULE_SETUP
 case 61:
 YY_RULE_SETUP
 #line 82 "asm2mif.l"
-eval_opcode(50,1);
+{eval_opcode(50,1);add_mne("PSET");}
 	YY_BREAK
 case 62:
 YY_RULE_SETUP
@@ -1051,7 +1051,7 @@ YY_RULE_SETUP
 case 64:
 YY_RULE_SETUP
 #line 85 "asm2mif.l"
-eval_opcode(53,1);
+{eval_opcode(53,1);  add_mne("NORMS");}
 	YY_BREAK
 case 65:
 YY_RULE_SETUP
