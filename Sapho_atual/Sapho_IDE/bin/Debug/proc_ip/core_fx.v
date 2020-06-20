@@ -31,7 +31,8 @@ module core_fx
 	parameter XOR   =  0,
 	parameter SHL   =  0,
 	parameter SRS   =  0,
-	parameter NRM   =  0
+	parameter NRM   =  0, 
+	parameter ABS   =  0
 )
 (
 	input                       clk, rst,
@@ -132,7 +133,8 @@ ula_fx #(.NUBITS(NUBITS),
          .XOR   (XOR   ),
          .SHL   (SHL   ),
          .SRS   (SRS   ),
-			.NRM   (NRM   )) ula(id_ula_op, id_ula_data, ula_acc, ula_out);
+			.NRM   (NRM   ),
+			.ABS   (ABS   )) ula(id_ula_op, id_ula_data, ula_acc, ula_out);
 
 // Acumulador -----------------------------------------------------------------
 

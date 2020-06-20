@@ -12,6 +12,7 @@
 void main() 
 {
     int a = 32;
-    a /> a;
-    out(0,a);
+    int b;
+    b /> abs(a);
+    out(0,b);
 }

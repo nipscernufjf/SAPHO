@@ -10,8 +10,9 @@
 @main LOAD 32
 SET maina
 LOAD maina
-NORMS maina
+ABS
+NORMS mainb
 LOAD 0
-PLD maina
+PLD mainb
 OUT
 @fim JMP fim

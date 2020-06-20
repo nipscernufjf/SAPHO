@@ -83,6 +83,7 @@ LINHA          \n
 "PSETP"  eval_opcode(51,1);
 "NORM"   {eval_opcode(52,0); add_mne("NRM");}
 "NORMS"  eval_opcode(53,1);
+"ABS"   {eval_opcode(54,0); add_mne("ABS");}
 
 {CONST}   eval_opernd(yytext,1);
 {STRIN}   eval_opernd(yytext+1,0);

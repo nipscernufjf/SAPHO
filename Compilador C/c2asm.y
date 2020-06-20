@@ -41,6 +41,7 @@ void array_check(int id, int et);
 int get_npar    (int par);
 void   par_check(int et);
 int  exec_in    (int et);
+int  exec_abs   (int et);
 int  get_type   (int et);
 void exec_out1  (int et);
 void exec_out2  (int et);
@@ -49,7 +50,7 @@ void exec_out2  (int et);
 %token PRNAME DIRNAM DATYPE NUBITS NBMANT NBEXPO NDSTAC SDEPTH NUIOIN NUIOOU NUGAIN
 %token TYPE
 %token INUM FNUM ID STRING
-%token IN OUT
+%token IN OUT ABS
 %token RETURN
 %token WHILE IF ELSE
 %token SHIFTL SHIFTR SSHIFTR
@@ -147,9 +148,10 @@ exp_list:  //vazio
 
 // Standard library -----------------------------------------------------------
 
-std_out: OUT '(' exp ','                   {   exec_out1($3);}
+std_out : OUT '(' exp ','                   {   exec_out1($3);}
          exp ')' ';'                       {   exec_out2($6);}
-std_in : IN  '(' exp ')'                   {$$ = exec_in($3);}
+std_in  : IN  '(' exp ')'                   {$$ = exec_in($3);}
+std_abs : ABS  '(' exp ')'                  {$$ = exec_abs($3);}
 
 // if else --------------------------------------------------------------------
 
@@ -199,6 +201,7 @@ exp:       const
          | ID                              {                    $$ = load($1,0,v_type[$1],0);}
          | ID '[' exp ']'                  {array_check($1,$3); $$ = load($1,0,v_type[$1],1);}
          | std_in                          {$$ =     $1*OFST;}
+         | std_abs                         {$$ =     $1*OFST;}
          | func_call                       {$$ =     $1*OFST;}
          | '(' exp ')'                     {$$ =         $2 ;}
          | '+' exp                         {$$ =         $2 ;}
@@ -857,6 +860,25 @@ int exec_in(int et)
     }
 
     fprintf(f_asm, "PUSH\nIN\n");
+
+    return (prtype == 0) ? 1 : 2;
+}
+
+int exec_abs(int et)
+{
+    load_check(et, 0);
+
+    if (et >= 2*OFST)
+    {
+        fprintf(stdout, "Atencao na linha %d: endereco de entrada tem que ser int. Soh me dando trabalho a toa!\n", line_num+1);
+        if (prtype == 0)
+        {
+            fprintf(f_asm, "CALL float2int\n");
+            f2i = 1;
+        }
+    }
+
+    fprintf(f_asm, "ABS\n");
 
     return (prtype == 0) ? 1 : 2;
 }

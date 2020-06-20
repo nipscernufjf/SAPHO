@@ -57,20 +57,21 @@
      STRING = 273,
      IN = 274,
      OUT = 275,
-     RETURN = 276,
-     WHILE = 277,
-     IF = 278,
-     ELSE = 279,
-     SHIFTL = 280,
-     SHIFTR = 281,
-     SSHIFTR = 282,
-     GREQU = 283,
-     LESEQ = 284,
-     EQU = 285,
-     DIF = 286,
-     LAND = 287,
-     LOR = 288,
-     NORM = 289
+     ABS = 276,
+     RETURN = 277,
+     WHILE = 278,
+     IF = 279,
+     ELSE = 280,
+     SHIFTL = 281,
+     SHIFTR = 282,
+     SSHIFTR = 283,
+     GREQU = 284,
+     LESEQ = 285,
+     EQU = 286,
+     DIF = 287,
+     LAND = 288,
+     LOR = 289,
+     NORM = 290
    };
 #endif
 /* Tokens.  */
@@ -92,20 +93,21 @@
 #define STRING 273
 #define IN 274
 #define OUT 275
-#define RETURN 276
-#define WHILE 277
-#define IF 278
-#define ELSE 279
-#define SHIFTL 280
-#define SHIFTR 281
-#define SSHIFTR 282
-#define GREQU 283
-#define LESEQ 284
-#define EQU 285
-#define DIF 286
-#define LAND 287
-#define LOR 288
-#define NORM 289
+#define ABS 276
+#define RETURN 277
+#define WHILE 278
+#define IF 279
+#define ELSE 280
+#define SHIFTL 281
+#define SHIFTR 282
+#define SSHIFTR 283
+#define GREQU 284
+#define LESEQ 285
+#define EQU 286
+#define DIF 287
+#define LAND 288
+#define LOR 289
+#define NORM 290
 
 
 
