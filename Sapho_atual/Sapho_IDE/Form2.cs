@@ -128,6 +128,14 @@ namespace Sapho_IDE
 
         private void rb_float_CheckedChanged(object sender, EventArgs e)
         {
+            if(rb_float.Checked == true)
+            {
+                tb_gain.Enabled = false;
+            }
+            else
+            {
+                tb_gain.Enabled = true;
+            }
 
         }
 

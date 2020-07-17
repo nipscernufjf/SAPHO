@@ -224,6 +224,7 @@ namespace Sapho_IDE
             if (Sapho_IDE.Properties.Settings.Default.dat_type == "0")
             {
                 fctb.InsertText("#NUBITS " + Properties.Settings.Default.n_bitsfix + "\n");
+                fctb.InsertText("#NUGAIN " + Convert.ToString(Math.Pow(2, Convert.ToInt32(Properties.Settings.Default.Gain))) + "\n");
             }
             if (Sapho_IDE.Properties.Settings.Default.dat_type == "1")
             {
@@ -237,7 +238,7 @@ namespace Sapho_IDE
             fctb.InsertText("#NUIOIN " + Properties.Settings.Default.n_io_in + "\n");
             fctb.InsertText("#NUIOOU " + Properties.Settings.Default.n_io_out + "\n");
 
-            fctb.InsertText("#NUGAIN " + Convert.ToString(Math.Pow(2,Convert.ToInt32( Properties.Settings.Default.Gain))) + "\n");
+            
 
             fctb.InsertText("\nvoid main() \n{\n\n}");
         }
