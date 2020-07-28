@@ -130,20 +130,25 @@ void build_vfile()
     fprintf(f_veri, "wire [%d:0] addr_in;\n", (int)ceil(log2(nuioin2)-1));
     fprintf(f_veri, "wire [%d:0] addr_out;\n\n", (int)ceil(log2(nuioou)-1));
 
-    if (float_point)
+    if (float_point) // exclusivo ponto flutuante
     {
     fprintf(f_veri, "proc_fl #(.NBMANT(%d),\n", nbmant);
-    fprintf(f_veri, ".NBEXPO(%d),\n", nbexpo);
+    fprintf(f_veri, ".NBEXPO(%d),\n", nbexpo); // possivelmente pode ser usado em ambos;
     }
-    else
-    fprintf(f_veri, "proc_fx #(.NUBITS(%d),\n", nbits);
+    else // exclusivo ponto fixo
+    {
+        fprintf(f_veri, "proc_fx #(.NUBITS(%d),\n", nbits);
+        fprintf(f_veri, ".NUGAIN(%d),\n", nugain);
+    }
+
 
     fprintf(f_veri, ".MDATAS(%d),\n", n_dat + ndstac);
     fprintf(f_veri, ".MINSTS(%d),\n", n_ins);
     fprintf(f_veri, ".SDEPTH(%d),\n", sdepth);
     fprintf(f_veri, ".NUIOIN(%d),\n", nuioin2);
     fprintf(f_veri, ".NUIOOU(%d),\n", nuioou);
-    fprintf(f_veri, ".NUGAIN(%d),\n", nugain);
+
+
 
     int i;
     for (i = 0; i < m_count; i++) fprintf(f_veri, ".%s(1),\n", m_name[i]);

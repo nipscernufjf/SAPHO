@@ -2006,7 +2006,7 @@ int main(int argc, char *argv[])
 	eval_finish();
 
 	fprintf(stderr, "###### Total de instrucoes: %d\n", n_ins);
-	fprintf(stderr, "###### Total de variaveis : %d\n", n_dat+ndstac);
+	fprintf(stderr, "###### Total de dados: %d\n", n_dat+ndstac);
 
     return 0;
 }

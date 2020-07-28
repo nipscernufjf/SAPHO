@@ -93,15 +93,19 @@ void get_addr(char *f_name, int tam)
         printf("Nao rolou de abrir/achar o arquivo!!\n");
 
 
-    int i;
+    int i,val;
     char linha[32];
+
 
     for (i = 0;i < tam ; i++)
     {
         if(pp == 0)
         {
             fgets(linha, sizeof(linha), filepointer);
-            int val = atoi(linha);
+            if(float_point)
+                val = f2mf(linha);
+            else
+                val = atoi(linha);
             add_data(val);
         }
 
