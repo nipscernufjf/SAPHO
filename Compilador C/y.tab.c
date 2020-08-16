@@ -3144,7 +3144,7 @@ int exec_abs(int et)
 
     if (et >= 2*OFST)
     {
-        fprintf(stdout, "Atencao na linha %d: endereco de entrada tem que ser int. Soh me dando trabalho a toa!\n", line_num+1);
+        //fprintf(stdout, "Atencao na linha %d: endereco de entrada tem que ser int. Soh me dando trabalho a toa!\n", line_num+1);
         if (prtype == 0)
         {
             fprintf(f_asm, "CALL float2int\n");

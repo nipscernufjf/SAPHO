@@ -212,6 +212,12 @@ always @ (posedge clk or posedge rst) begin
 						req_in  <= 1'b0;
 						out_en  <= 1'b0;
 					end
+			54  : begin
+						ula_op  <= 4'd12;     // ABS  
+						srf     <= 1'b0;
+						req_in  <= 1'b0;
+						out_en  <= 1'b0;
+					end					
 		default: begin
 						ula_op  <= 4'dx;
 						srf     <= 1'bx;
@@ -373,6 +379,11 @@ always @ (*) begin
 						dsp_push <= 1'b0;
 						dsp_pop  <= 1'b1;
 					end
+			54: begin                        // ABS
+						mem_wr   <= 1'b0;
+						dsp_push <= 1'b0;
+						dsp_pop  <= 1'b0;
+					end					
 		default: begin
 						mem_wr   <= 1'bx;
 						dsp_push <= 1'bx;
