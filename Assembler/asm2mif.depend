@@ -1603,3 +1603,59 @@
 	"eval.h"
 	"mnemonicos.h"
 
+1607390069 source:c:\users\lucca\documents\github\sapho\assembler\eval.c
+	"eval.h"
+	"t2t.h"
+	"variaveis.h"
+	"labels.h"
+	"veri_comp.h"
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+
+1606836532 c:\users\lucca\documents\github\sapho\assembler\eval.h
+
+1607091788 c:\users\lucca\documents\github\sapho\assembler\t2t.h
+
+1607091788 c:\users\lucca\documents\github\sapho\assembler\variaveis.h
+
+1607091788 c:\users\lucca\documents\github\sapho\assembler\labels.h
+
+1607091788 c:\users\lucca\documents\github\sapho\assembler\veri_comp.h
+
+1607390069 source:c:\users\lucca\documents\github\sapho\assembler\veri_comp.c
+	"veri_comp.h"
+	<string.h>
+	<stdio.h>
+	<math.h>
+	"eval.h"
+	"mnemonicos.h"
+
+1607091788 c:\users\lucca\documents\github\sapho\assembler\mnemonicos.h
+
+1607091788 source:c:\users\lucca\documents\github\sapho\assembler\labels.c
+	"labels.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
+1607091788 source:c:\users\lucca\documents\github\sapho\assembler\mnemonicos.c
+	"mnemonicos.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1607091788 source:c:\users\lucca\documents\github\sapho\assembler\t2t.c
+	"t2t.h"
+	<string.h>
+	<stdlib.h>
+	<math.h>
+	"veri_comp.h"
+
+1607091788 source:c:\users\lucca\documents\github\sapho\assembler\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+

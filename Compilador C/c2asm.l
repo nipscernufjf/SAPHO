@@ -32,6 +32,7 @@ LETRA  [A-Za-z_]
 "in"                            return IN;
 "out"                           return OUT;
 "abs"                           return ABS;
+"sign"                          return SIGN;
 "return"                        return RETURN;
 "while"                         return WHILE;
 "if"                            return IF;

@@ -16,7 +16,7 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add library="C:/testeSapho/GnuWin32/lib/libfl.a" />
+					<Add library="C:/FlexBison/GnuWin32/lib/libfl.a" />
 				</Linker>
 				<ExtraCommands>
 					<Add before="flex -oasm2mif.c asm2mif.l" />

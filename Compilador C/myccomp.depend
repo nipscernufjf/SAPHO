@@ -796,3 +796,27 @@
 
 1595955098 c:\users\luccaviccini\desktop\ufjf\ic\ic_luciano\nipscernufjf\sapho\compilador c\variaveis.h
 
+1607091788 source:c:\users\lucca\documents\github\sapho\compilador c\labels.c
+	"labels.h"
+	<stdio.h>
+	<stdlib.h>
+
+1607091788 c:\users\lucca\documents\github\sapho\compilador c\labels.h
+
+1607091788 source:c:\users\lucca\documents\github\sapho\compilador c\t2t.c
+	"t2t.h"
+	<string.h>
+	<stdlib.h>
+	<math.h>
+
+1607091788 c:\users\lucca\documents\github\sapho\compilador c\t2t.h
+	<stdio.h>
+
+1607091788 source:c:\users\lucca\documents\github\sapho\compilador c\variaveis.c
+	"variaveis.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1607091788 c:\users\lucca\documents\github\sapho\compilador c\variaveis.h
+

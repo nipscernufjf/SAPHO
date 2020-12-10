@@ -9,10 +9,10 @@
 #NUGAIN 2
 
 
-void main() 
+void main()
 {
     int a = 32;
-    int b;
-    b /> abs(a);
-    out(0,b);
+    int b = 16;
+    int c = sign(a,b);
+
 }

@@ -1,5 +1,5 @@
-#PRNAME teste666
-#DIRNAM "C:\Users\LuccaViccini\Desktop\UFJF\IC\IC_Luciano\Rede_Neural\teste666\Hardware\teste666_H"
+#PRNAME testeASM
+#DIRNAM "C:\Users\Lucca\Desktop\TesteASM"
 #DATYPE 0
 #NUBITS 20
 #NDSTAC 12
@@ -7,11 +7,13 @@
 #NUIOIN 2
 #NUIOOU 2
 #NUGAIN 4
-@main #arrays mainlucca 10 "texto.txt"
-#arrays maintab 5 "texto2.txt"
-LOAD 6
+
+@main LOAD 32
+SET maina
+LOAD 16
 SET mainb
-LOAD 0
+LOAD maina
 PLD mainb
-OUT
+SIGN
+SET mainc
 @fim JMP fim

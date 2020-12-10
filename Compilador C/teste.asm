@@ -9,10 +9,10 @@
 #NUGAIN 2
 @main LOAD 32
 SET maina
+LOAD 16
+SET mainb
 LOAD maina
-ABS
-NORMS mainb
-LOAD 0
 PLD mainb
-OUT
+SIGN
+SET mainc
 @fim JMP fim
