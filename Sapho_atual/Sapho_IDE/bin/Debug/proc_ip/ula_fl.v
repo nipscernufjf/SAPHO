@@ -108,6 +108,8 @@ always @ (*) begin
 		4'd4   : out <= div;        // DIV
 	// 4'd5   : reservado para NEG // NEG
 	// 4'd12  : reservado para ABS // ABS
+	// 4'd13  : reservado para SIGN
+
 		default: out <= {NBITS{1'bx}};
 	endcase
 end
@@ -213,7 +215,7 @@ module ula_fl
 	parameter           LOR = 0,
 	parameter           NEG = 0,
 	parameter           ABS = 0,
-	parameter			  SIGN = 0		
+	parameter			  SIGN = 0
 )
 (
 	input         [      3:0] op,
@@ -318,41 +320,46 @@ wire        [MAN-1:0] mux_m;
 wire        sm;
 wire [3:0] opm;
 
-generate 	
-	if (NEG == 1 && ABS == 1 && SIGN == 1) begin
-		assign sm  = (op == 4'd5) ? !s2 : (op == 4'd12) ? 1'b0: (op == 4'd12) ? s1  :s2;
-		assign opm = (op == 4'd5 || op == 4'd12 ||  op == 4'd13) ? 4'd0 : op;	
-	end 
-	
-	else if (NEG == 1 && SIGN == 1) begin
+generate
+	if ((NEG == 1) && (ABS == 0) && (SIGN == 1)) begin
 		assign sm  = (op == 4'd5) ? !s2 : (op == 4'd13) ?  s1   :s2;
-		assign opm = (op == 4'd5 || op == 4'd13) ? 4'd0 : op;	
-	end 
-	
-	else if (ABS == 1 && SIGN == 1) begin
+		assign opm = (op == 4'd5 || op == 4'd13) ? 4'd0 : op;
+	end
+
+	else if ((NEG == 1) && (ABS == 1) && (SIGN == 1)) begin
+		assign sm  = (op == 4'd5) ? !s2 : (op == 4'd12) ? 1'b0: (op == 4'd13) ? s1  :s2;
+		assign opm = (op == 4'd5 || op == 4'd12 ||  op == 4'd13) ? 4'd0 : op;
+	end
+
+	else if ((NEG == 1) && (ABS == 0) && (SIGN == 1)) begin
+		assign sm  = (op == 4'd5) ? !s2 : (op == 4'd13) ?  s1   :s2;
+		assign opm = (op == 4'd5 || op == 4'd13) ? 4'd0 : op;
+	end
+
+	else if ((NEG == 0) && (ABS == 1) && (SIGN == 1)) begin
 		assign sm  = (op == 4'd12) ? 1'b0 : (op == 4'd13) ? s1   :s2;
-		assign opm = (op == 4'd5 || op == 4'd12 || op == 4'd13) ? 4'd0 : op;	
-	end 
-	else if (NEG == 1 && ABS == 1) begin
+		assign opm = (op == 4'd12 || op == 4'd13) ? 4'd0 : op;
+	end
+	else if ((NEG == 1) && (ABS == 1) && (SIGN == 0)) begin
 		assign sm = (op == 4'd5) ? !s2 : (op == 4'd12) ? 1'b0 :s2;
 		assign opm = (op == 4'd5 || op == 4'd12) ? 4'd0 : op;
-	end	
-	
-	else if(NEG == 1) begin
+	end
+
+	else if((NEG == 1) && (ABS == 0) && (SIGN == 0)) begin
 		assign  sm = (op == 4'd5) ? !s2  : s2;
 		assign opm = (op == 4'd5) ? 4'd0 : op;
 	end
-	
-	else if(ABS == 1) begin
+
+	else if((NEG == 0) && (ABS == 1) && (SIGN == 0)) begin
 		assign sm  = (op == 4'd12) ? 1'b0: s2;
 		assign opm = (op == 4'd12) ? 4'd0 : op;
 	end
-	
-	else if(SIGN == 1) begin
+
+	else if((NEG == 0) && (ABS == 0) && (SIGN == 1)) begin
 		assign sm  = (op == 4'd13) ? s1: s2;
 		assign opm = (op == 4'd13) ? 4'd0 : op;
 	end
-		
+
 	else begin
 		assign  sm = s2;
 		assign opm = op;
