@@ -28,6 +28,7 @@ module proc_fl
 	parameter LIN   =  0,
 	parameter XOR   =  0,
 	parameter ABS   =  0,
+	parameter SIGN   =  0,
 
 	// parametros configurados internamente ------------------------------------
 
@@ -83,7 +84,8 @@ core_fl #(.NBMANT(NBMANT),
           .LOR   (LOR)   ,
           .XOR   (XOR)   ,
           .NEG   (NEG)   ,
-			 .ABS   (ABS)       )  core(clk, rst,
+			 .ABS   (ABS)   ,
+			 .SIGN  (SIGN))  core(clk, rst,
                                 instr, instr_addr,
                                 mem_wr, mem_addr_w, mem_addr_r, mem_data_in, mem_data_out,
                                 io_in, addr_in, addr_out, req_in, out_en);
@@ -119,7 +121,8 @@ core_fl #(.NBMANT(NBMANT),
           .LOR   (LOR)   ,
           .XOR   (XOR)   ,
           .NEG   (NEG)   ,
-			 .ABS   (ABS) )  core(clk, rst,
+			 .ABS   (ABS)   ,
+			 .SIGN  (SIGN))  core(clk, rst,
                                 instr, instr_addr,
                                 mem_wr, mem_addr_w, mem_addr_r, mem_data_in, mem_data_out,
                                 io_in, addr_in, addr_out, req_in, out_en);

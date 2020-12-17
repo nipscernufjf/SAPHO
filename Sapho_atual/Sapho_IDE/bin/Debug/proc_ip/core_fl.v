@@ -25,7 +25,8 @@ module core_fl
 	parameter LOR    = 0,
 	parameter XOR    = 0,
 	parameter NEG    = 0,
-	parameter ABS    = 0
+	parameter ABS    = 0,
+	parameter SIGN   = 0
 )
 (
 	input                       clk, rst,
@@ -117,7 +118,8 @@ ula_fl #(NBEXPO,
          GRE   ,
          LOR   ,
          NEG   ,
-         ABS			) ula (id_ula_op, id_ula_data, ula_acc, ula_out);
+         ABS   ,
+			SIGN	) ula (id_ula_op, id_ula_data, ula_acc, ula_out);
 
 // Acumulador -----------------------------------------------------------------
 

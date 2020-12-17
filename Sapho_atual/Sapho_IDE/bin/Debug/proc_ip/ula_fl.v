@@ -212,7 +212,8 @@ module ula_fl
 	parameter           GRE = 0,
 	parameter           LOR = 0,
 	parameter           NEG = 0,
-	parameter           ABS = 0
+	parameter           ABS = 0,
+	parameter			  SIGN = 0		
 )
 (
 	input         [      3:0] op,
@@ -318,18 +319,40 @@ wire        sm;
 wire [3:0] opm;
 
 generate 	
-	if (NEG == 1 && ABS == 1) begin
+	if (NEG == 1 && ABS == 1 && SIGN == 1) begin
+		assign sm  = (op == 4'd5) ? !s2 : (op == 4'd12) ? 1'b0: (op == 4'd12) ? s1  :s2;
+		assign opm = (op == 4'd5 || op == 4'd12 ||  op == 4'd13) ? 4'd0 : op;	
+	end 
+	
+	else if (NEG == 1 && SIGN == 1) begin
+		assign sm  = (op == 4'd5) ? !s2 : (op == 4'd13) ?  s1   :s2;
+		assign opm = (op == 4'd5 || op == 4'd13) ? 4'd0 : op;	
+	end 
+	
+	else if (ABS == 1 && SIGN == 1) begin
+		assign sm  = (op == 4'd12) ? 1'b0 : (op == 4'd13) ? s1   :s2;
+		assign opm = (op == 4'd5 || op == 4'd12 || op == 4'd13) ? 4'd0 : op;	
+	end 
+	else if (NEG == 1 && ABS == 1) begin
 		assign sm = (op == 4'd5) ? !s2 : (op == 4'd12) ? 1'b0 :s2;
 		assign opm = (op == 4'd5 || op == 4'd12) ? 4'd0 : op;
-	end 
+	end	
+	
 	else if(NEG == 1) begin
 		assign  sm = (op == 4'd5) ? !s2  : s2;
 		assign opm = (op == 4'd5) ? 4'd0 : op;
 	end
+	
 	else if(ABS == 1) begin
-		assign  sm = 1'b0;
+		assign sm  = (op == 4'd12) ? 1'b0: s2;
 		assign opm = (op == 4'd12) ? 4'd0 : op;
-	end	
+	end
+	
+	else if(SIGN == 1) begin
+		assign sm  = (op == 4'd13) ? s1: s2;
+		assign opm = (op == 4'd13) ? 4'd0 : op;
+	end
+		
 	else begin
 		assign  sm = s2;
 		assign opm = op;
