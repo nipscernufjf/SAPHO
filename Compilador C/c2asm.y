@@ -35,17 +35,18 @@ int  declar_par (int   t, int id );
 void declar_fun (int id1, int id2);
 void declar_ret (int et);
 int  fcall      (int id);
-void vcall      (int id);
-int int_oper    (int t1, int t2, char *op, char *code, int fok);
-void array_check(int id, int et);
-int get_npar    (int par);
-void   par_check(int et);
-int  exec_in    (int et);
-int  exec_abs   (int et);
-int  exec_sign  (int et, int et2);
-int  get_type   (int et);
-void exec_out1  (int et);
-void exec_out2  (int et);
+void  vcall      (int id);
+int   int_oper    (int t1, int t2, char *op, char *code, int fok);
+void  array_check(int id, int et);
+int   get_npar    (int par);
+void  par_check  (int et);
+int   exec_in    (int et);
+int   exec_abs   (int et);
+void  exec_sign1 (int et);
+int   exec_sign2 (int et);
+int   get_type   (int et);
+void  exec_out1  (int et);
+void  exec_out2  (int et);
 %}
 
 %token PRNAME DIRNAM DATYPE NUBITS NBMANT NBEXPO NDSTAC SDEPTH NUIOIN NUIOOU NUGAIN
@@ -149,11 +150,12 @@ exp_list:  //vazio
 
 // Standard library -----------------------------------------------------------
 
-std_out : OUT '(' exp ','                   {   exec_out1($3);}
-         exp ')' ';'                       {   exec_out2($6);}
-std_in  : IN  '(' exp ')'                   {$$ = exec_in($3);}
-std_abs : ABS  '(' exp ')'                  {$$ = exec_abs($3);}
-std_sign :SIGN  '(' exp ',' exp ')'         {$$ = exec_sign($3, $5);}
+std_out : OUT '(' exp ','                   {exec_out1($3);     }
+         exp ')' ';'                        {exec_out2($6);     }
+std_in  : IN  '(' exp ')'                   {$$ = exec_in($3);  }
+std_abs : ABS  '(' exp ')'                  {$$ = exec_abs($3); }
+std_sign :SIGN  '(' exp ','                 {exec_sign1($3);     }
+         exp ')'                            {$$ = exec_sign2($6);}
 
 // if else --------------------------------------------------------------------
 
@@ -890,6 +892,40 @@ int exec_sign(int et, int et2)
 {
     load_check(et, 0);
     load_check(et2, 0);
+
+    if (et >= 2*OFST)
+    {
+        //fprintf(stdout, "Atencao na linha %d: endereco de entrada tem que ser int. Soh me dando trabalho a toa!\n", line_num+1);
+        if (prtype == 0)
+        {
+            fprintf(f_asm, "CALL float2int\n");
+            f2i = 1;
+        }
+    }
+
+    fprintf(f_asm, "SIGN\n");
+
+    return (prtype == 0) ? 1 : 2;
+}
+
+void exec_sign1(int et)
+{
+    load_check(et, 0);
+
+    if (et >= 2*OFST)
+    {
+        fprintf(stdout, "Atencao na linha %d: endereco de saida tem que ser int. Soh me dando trabalho a toa!\n", line_num+1);
+        if (prtype == 0)
+        {
+            fprintf(f_asm, "CALL float2int\n");
+            f2i = 1;
+        }
+    }
+}
+
+int exec_sign2(int et)
+{
+    load_check(et, 0);
 
     if (et >= 2*OFST)
     {
